@@ -23,7 +23,7 @@
     </koken:tags>
     </p>
 	  <p class="album-name">{{ album.title }} </p> 
-	  <p class="album-desc">{{ album.description }} </p>
+	  <p class="album-desc">{{ album.description paragraphs="true"  }} </p>
 	 </article>
   <ul class="grid">
     <koken:loop>
