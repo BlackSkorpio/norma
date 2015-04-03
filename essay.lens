@@ -11,7 +11,7 @@
     <h2 class="page-name"> 
       {{ essay.title }} 
     </h2> 
-    {{ essay.content paragraphs="true" }} 
+    {{ essay.content }} 
   </article>
 <koken:include file="inc/components/share.html" />
 <div class="disquis">
