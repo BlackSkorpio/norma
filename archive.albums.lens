@@ -7,7 +7,7 @@
       <ul class="grid">
       <koken:loop>
         <li>
-          <koken:link  title="View {{ album.title }}">
+          <koken:link  title="Visa {{ album.title }}">
               <koken:img crop="adaptive" />
               <div>
                 <h3>{{ album.title }} </h3>
@@ -24,7 +24,7 @@
       <ul class="grid">
       <koken:loop>
         <li>
-          <koken:link  title="View {{ album.title }}">
+          <koken:link  title="Visa {{ album.title }}">
               <koken:img crop="adaptive" />
               <div>
                 <h3>{{ album.title }} </h3>
@@ -41,7 +41,7 @@
       <ul class="grid">
       <koken:loop>
         <li>
-          <koken:link  title="View {{ album.title }}">
+          <koken:link  title="Visa {{ album.title }}">
               <koken:img crop="adaptive" />
               <div>
                 <h3>{{ album.title }} </h3>

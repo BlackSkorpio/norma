@@ -13,7 +13,7 @@
     </koken:categories>
 
     <koken:tags>
-    <span class="tags"> /  Tagged 
+    <span class="tags">Tagged 
       <koken:loop separator=", ">
         <koken:link>
           {{ tag.title }}
@@ -23,7 +23,7 @@
     </koken:tags>
     </p>
 	  <p class="album-name">{{ album.title }} </p> 
-	  <p class="album-desc">{{ album.description paragraphs="true"  }} </p>
+	  <p class="album-desc">{{ album.description paragraphs="true" }} </p>
 	 </article>
   <ul class="grid">
     <koken:loop>

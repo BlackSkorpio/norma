@@ -1,7 +1,7 @@
 <koken:include file="inc/components/header.html" />
 <koken:load>
   <koken:content_image>
-    <koken:img />
+    <koken:img crop="adaptive" />
   </koken:content_image>
   <koken:content_video>
     <koken:video />
