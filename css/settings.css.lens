@@ -1,3 +1,15 @@
+div#credit {
+    font-size: 11px;
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    text-shadow: none;
+	background: #fff;
+	padding:4px;
+	opacity: 0.3;
+	filter: alpha(opacity=40); /* For IE8 and earlier */
+	z-index: 999;
+}
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
 @import url(https://fonts.googleapis.com/css?family=Merriweather:400,300);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
@@ -50,14 +62,20 @@ p a:hover {
 	z-index:1;
 }
 
-.sitename {
+#sitename {
 	color:#fff;
 	text-transform:uppercase;
 	float:left;
 	padding:14px;
 	background:#000;
+	/*background-image: url('/apple-touch-icon-57x57.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding: 0 0.5em 0 2.4em; /* 40px/16=1.4em*/
+	content: " ";*/
 	display:block;
 	box-sizing:border-box;
+	/*height:60px;*/
 	height:48px;
 	min-width:48px;
 	letter-spacing:3px;
@@ -66,6 +84,8 @@ p a:hover {
 	z-index:999;
 	margin:20px;
 	text-align:center;
+	opacity: 0.3;
+	position: fixed;
 }
 
 #logo {
@@ -118,6 +138,7 @@ nav .k-nav-current {
 	background:#333;
 	color:#fff;
 	display:inline-block;
+	white-space: nowrap;
 }
 
 nav.mobile ul {
@@ -259,14 +280,14 @@ nav.mobile .k-nav-current {
     align-items: center;
     text-align: center;
     opacity: 0;
-    transition: all .2s ease-out;
-    -webkit-transition: all .2s ease-out;
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
     z-index:5;
 }
 .grid li a div:hover {
     opacity:1;
-    transition: all .2s ease-out;
-    -webkit-transition: all .2s ease-out;
+    transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
 }
 
 .grid li a div p, .grid li a div h3, .grid li a div h4 {
@@ -366,11 +387,12 @@ nav.mobile .k-nav-current {
 	color:#000;
 	box-sizing:border-box;
 	display:block;
-	height:50px;
+	height:30px;
 	width:50px;
 	float:left;
-	padding-top:14px;
+	padding-top:2px;
 	padding-left:17px;
+	opacity: 0.3;
 }
 
 .sldshw-arrow-left {
@@ -382,6 +404,7 @@ nav.mobile .k-nav-current {
 	background:#000;
 	border:none;
 	color:#fff;
+	opacity: 0.5;
 }
 
 footer {
@@ -406,7 +429,7 @@ footer {
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	border-bottom:1px solid #ddd;
-	padding:70px 0 70px 0;
+	padding:20px 0 20px 0;
 	font-family:'Merriweather', serif;
 }
 
@@ -426,11 +449,6 @@ footer {
 	color:#222;
 	font-weight:300;
 	font-family: 'Merriweather', serif;
-}
-
-.entry blockquote:before, 
-.entry blockquote:after {
-	content:'"';
 }
 
 .entry:first-of-type {
@@ -495,10 +513,12 @@ footer {
 }
 
 .k-lens-essay .page-content, 
-.k-lens-tags .page-content {
+.k-lens-tags .page-content,
+.k-lens-page .page-content {
 	padding-top:0;
 }
 
+.k-content,
 .k-lens-page .page-content p, 
 .k-lens-page .page-content h1 {
 	max-width:750px;
@@ -506,7 +526,7 @@ footer {
 	padding:0 20px 0 20px;
 }
 
-.entry h2, 
+.entry h1, 
 .album-name, 
 .exif h1, 
 .page-name, 
@@ -520,9 +540,9 @@ footer {
 	line-height:1.5em;
 }
 
-.k-lens-essays h2, 
-.k-lens-essay h2, 
-.list h2 {
+.k-lens-essays h1, 
+.k-lens-essay h1, 
+.list h1 {
 	text-transform:capitalize;
 	letter-spacing:0;
 }
@@ -539,7 +559,8 @@ footer {
 
 .entry .k-content-embed {
 	margin-top:-50px;
-	margin:70px 0 70px 0;
+	margin:10px 0 10px 0;
+	/*margin:70px 0 70px 0;*/
 }
 
 .k-content-text .k-content-title, 
@@ -574,7 +595,8 @@ footer {
 .entry p, 
 .main-p, 
 .exif p, 
-.list p {
+.list p,
+form label {
 	line-height:1.7em;
 	font-size:1.17em;
 	letter-spacing:0.01rem;
@@ -583,15 +605,34 @@ footer {
 	font-family: 'Merriweather', serif;
 }
 
-.entry p {
+.entry ol li, .entry ul li {
+	font-family: 'Merriweather', serif;
+	color:#444;
+}
+
+.entry ol, .entry li {
+	line-height:1.5em;
+}
+
+.entry h1, .entry h2, .entry h3, .entry h4, .entry p, .entry ol, .entry ul {
+	padding:0 50px 0 50px;
 	max-width:750px;
 	margin:0 auto;
-	padding:0 50px 0 50px;
 	margin-top:15px;
 }
 
 .entry h2 {
-	padding:0 50px 0 50px;
+	font-size:2em;
+	font-weight:700;
+}
+
+.entry h3 {
+	font-size:1.6em;
+}
+
+.entry h4 {
+	font-size:1.4em;
+	color:#aaa;
 }
 
 .album-desc, .album-name {
@@ -621,7 +662,8 @@ footer {
 }
 
 .k-lens-page .page-content img {
-	margin:100px 0 100px 0;
+	/*margin:100px 0 100px 0;*/
+	margin:0 0 0 0;
 	max-width:100%;
 }
 
@@ -698,6 +740,72 @@ footer {
 	letter-spacing:1px;
 }
 
+.tags:before {
+	content:" / "
+}
+
+.k-lens-page #page-name {
+	padding:70px 20px 15px 20px;
+}
+
+.entry h1 {
+	text-transform:capitalize;
+}
+
+form {
+	max-width:750px;
+	margin:0 auto;
+	padding:0 20px 0 20px;
+}
+
+form fieldset {
+	margin-top:20px;
+}
+
+form input, form textarea {
+	width:100%;
+	font-size:1.17em;
+	padding:10px;
+	border:0;
+	background:#f0f0f0;
+	color:#000;
+}
+
+form input:focus, form textarea:focus {
+	outline:0;
+	background:#000;
+	color:#fff;
+}
+
+form label {
+	display:block;
+}
+
+form .k-contact-form-checkbox-field label {
+	display:inline;
+}
+
+form button {
+	border:0;
+	background:#000;
+	border-radius:3px;
+	padding:20px;
+	font-size:1.17em;
+	color:#fff;
+	cursor:pointer;
+}
+
+form button:hover {
+	background:#333;
+}
+
+.k-contact-form-required-field label:after {
+	content:"*";
+	font-size:.7em;
+	margin-left:10px;
+	padding-top:20px;
+}
+
 @media screen and (max-width: 1190px) {
     .grid li {
         width: 33.33333333%; 
@@ -711,6 +819,28 @@ footer {
         width: 50%; 
         width: -webkit-calc(100% / 2);
         width: calc(100% / 2);
+    }
+
+    .timeline-time {
+    	font-size:1.1em;
+    }
+
+    .k-lens-timeline h3 {
+    	font-size:1.5em;
+    }
+
+    .k-lens-album .time {
+    	font-size:1em;
+    }
+
+    .k-lens-album .tags {
+    	display:block;
+    	width:100%;
+    	text-align:center;
+    }
+
+    .k-lens-album .tags:before {
+    	content:"";
     }
 }
  
