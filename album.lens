@@ -28,8 +28,9 @@
   <ul class="grid">
     <koken:loop>
       <li>
-        <koken:link lightbox="true">
+        <koken:link title="Visa {{ content.title | content.filename }}" lightbox="true">
           <koken:img crop="adaptive"/>
+		  <div><h3>{{ content.title | content.filename }}</h3></div>
         </koken:link>
       </li>
     </koken:loop>
