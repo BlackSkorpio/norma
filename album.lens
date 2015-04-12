@@ -29,7 +29,7 @@
     <koken:loop>
       <li>
         <koken:link title="Visa {{ content.title | content.filename }}" lightbox="true">
-          <koken:img crop="adaptive"/>
+          <koken:img crop="adaptive" lazy="true"/>
 		  <div><h3>{{ content.title | content.filename }}</h3></div>
         </koken:link>
       </li>

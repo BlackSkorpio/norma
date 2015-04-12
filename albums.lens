@@ -5,7 +5,7 @@
       <koken:loop>
         <li>
           <koken:link  title="Visa {{ album.title }}">
-              <koken:img crop="adaptive" />
+              <koken:img crop="adaptive" lazy="true" />
               <div>
                 <h3>{{ album.title }} </h3>
               </div>
