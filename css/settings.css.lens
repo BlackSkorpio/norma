@@ -1,17 +1,17 @@
 img.k-lazy-loading {
 	background-repeat:no-repeat;
 	background-position:center center;
-	background-size:16px 16px;
-	background-image: url(inc/spinner.gif);
+	background-size:35px 35px;
+	background-image: url(/storage/themes/norma/inc/spinner.gif);
 }
 #ss_spinner {
 	background-repeat:no-repeat;
 	background-position:center center;
-	background-size:16px 16px;
+	background-size:35px 35px;
 	background-image: url(/storage/themes/norma/inc/spinner.gif);
 	background-color:#fff;
-	width:24px;
-	height:24px;
+	width:43px;
+	height:43px;
 	position:absolute;
 	left:50%;
 	top:50%;
