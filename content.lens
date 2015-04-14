@@ -6,7 +6,18 @@
 	<koken:content_image>
 		<div class="k-content">
 			<koken:link title="Visa {{ content.title | content.filename }} i helskärm" lightbox="true">
-			<koken:img respond_to="width" lazy="true" title="{{ content.title | content.filename }} i helskärm" /></koken:link>
+			<koken:img respond_to="width" lazy="true" title="Visa {{ content.title | content.filename }} i helskärm" /></koken:link>
+			<koken:not empty="content.caption">{{ content.caption }}</koken:not>
+			<div class="previouslink">
+			<koken:previous>
+				<koken:link bind_to_key="left" title="Föregående bild"><li class="previouslink" id="previous_link">Föregående</li></koken:link>
+			</koken:previous>
+			</div>
+			<div class="nextlink">
+			<koken:next>
+				<koken:link bind_to_key="right" title="Nästa bild"><li class="nextlink" id="next_link">Nästa</li></koken:link>
+			</koken:next>
+			</div>
 		</div>
 	</koken:content_image>
 	<koken:content_video>
