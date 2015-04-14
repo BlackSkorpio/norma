@@ -4,6 +4,13 @@ div.picinfocontainer{
 	max-width:750px;
 	margin:0 auto;
 }
+.top-picinfocontainer {
+    max-width: 750px;
+    margin: 0px auto;
+    padding: 50px 20px;
+    color: #222;
+    background: none repeat scroll 0% 0% #FFF;
+}
 /* Next/Previous links
 */
  div.previouslink, div.nextlink{
@@ -1046,5 +1053,3 @@ form button:hover {
 	}
 	
 }
-
-
