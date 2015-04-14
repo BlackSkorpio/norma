@@ -1,0 +1,39 @@
+﻿<div class="picinfocontainer">
+	<koken:tags>
+	<div class="taggs"><h1 class="picinfo">Etiketter</h1>
+		<ul class="taggsdata">
+			<koken:loop separator=" ">
+				<koken:link title="Visa bilder med etiketten: {{ tag.title }}"><li id="tag" class="tagdetail">{{ tag.title }}</li></koken:link>
+			</koken:loop>
+		</ul>
+	</div>
+	</koken:tags>
+	<koken:exif>
+		<div class="exif"><h1 class="picinfo">Kamerainfo</h1>
+			<ul class="exifdata">
+			<koken:not empty="exif.model"><li id="exif-model" class="exifdetail">{{ exif.make }} {{ exif.model }}</li></koken:not>
+			<koken:not empty="exif.lens"><li id="exif-lens" class="exifdetail">{{ exif.lens }}</li></koken:not>
+			<koken:not empty="exif.aperture"><li id="exif-aperture" class="exifdetail">{{ exif.aperture }}</li></koken:not>
+			<koken:not empty="exif.exposure"><li id="exif-exposure" class="exifdetail">{{ exif.exposure }}</li></koken:not>
+			<koken:not empty="{{ exif.iso_speed_ratings }}"><li id="exif-iso" class="exifdetail">{{ exif.iso_speed_ratings }}</li></koken:not>
+			<koken:not empty="exif.focal_length"><li id="exif-focallength" class="exifdetail">{{ exif.focal_length }}</li></koken:not>
+			<koken:not empty="{{ exif.flash }}"><li id="exif-flash" class="exifdetail">{{ exif.flash }}</li></koken:not>
+			</ul>
+		</div>
+	</koken:exif>
+	<div class="bildinfo">
+		<h1 class="picinfo">Bildinformation</h1>
+		<ul class="bildinfodata">
+			<li class="picinfodetail"><span class="picinfosub">Namn:</span> {{ content.title | content.filename }}</li>
+			<li class="picinfodetail"><span class="picinfosub">Publicerad:</span> {{ content.uploaded_on }}</li>
+			<li class="picinfodetail"><span class="picinfosub">Tagen:</span> {{ content.captured_on }}</li>
+			<li class="picinfodetail"><span class="picinfosub">Finns i:</span> <koken:albums>
+			<koken:loop separator=" ">
+			<koken:link class="picinfosub" title="Se fler bilder från: {{ album.title }}">{{ album.title }}</koken:link>
+			</koken:loop>
+			</koken:albums></li>
+			<li class="picinfodetail"><span class="picinfosub">Fotograf:</span> <koken:iptc>{{ iptc.byline }}</koken:iptc></li>
+			<li class="picinfodetail"><span class="picinfosub">Licens:</span> {{ content.license.clean }}</li>
+		</ul>
+	</div>
+</div>
