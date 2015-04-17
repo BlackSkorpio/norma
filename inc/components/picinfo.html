@@ -15,25 +15,40 @@
 			<koken:not empty="exif.lens"><li id="exif-lens" class="exifdetail">{{ exif.lens }}</li></koken:not>
 			<koken:not empty="exif.aperture"><li id="exif-aperture" class="exifdetail">{{ exif.aperture }}</li></koken:not>
 			<koken:not empty="exif.exposure"><li id="exif-exposure" class="exifdetail">{{ exif.exposure }}</li></koken:not>
-			<koken:not empty="{{ exif.iso_speed_ratings }}"><li id="exif-iso" class="exifdetail">{{ exif.iso_speed_ratings }}</li></koken:not>
+			<koken:not empty="exif.iso_speed_ratings"><li id="exif-iso" class="exifdetail">{{ exif.iso_speed_ratings }}</li></koken:not>
 			<koken:not empty="exif.focal_length"><li id="exif-focallength" class="exifdetail">{{ exif.focal_length }}</li></koken:not>
-			<koken:not empty="{{ exif.flash }}"><li id="exif-flash" class="exifdetail">{{ exif.flash }}</li></koken:not>
+			<koken:not empty="exif.flash"><li id="exif-flash" class="exifdetail">{{ exif.flash }}</li></koken:not>
 			</ul>
 		</div>
 	</koken:exif>
+	<koken:not empty="content.caption">
+		<div class="bild-caption">
+			<h1 class="picinfo">Bildtext</h1>
+			<p class="bild-caption-text">{{ content.caption }}</p>
+		</div>
+	</koken:not>
 	<div class="bildinfo">
 		<h1 class="picinfo">Bildinformation</h1>
 		<ul class="bildinfodata">
-			<li class="picinfodetail"><span class="picinfosub">Namn:</span> {{ content.title | content.filename }}</li>
-			<li class="picinfodetail"><span class="picinfosub">Publicerad:</span> {{ content.uploaded_on }}</li>
-			<li class="picinfodetail"><span class="picinfosub">Tagen:</span> {{ content.captured_on }}</li>
-			<li class="picinfodetail"><span class="picinfosub">Finns i:</span> <koken:albums>
-			<koken:loop separator=" ">
-			<koken:link class="picinfosub" title="Se fler bilder från: {{ album.title }}">{{ album.title }}</koken:link>
-			</koken:loop>
-			</koken:albums></li>
-			<li class="picinfodetail"><span class="picinfosub">Fotograf:</span> <koken:iptc>{{ iptc.byline }}</koken:iptc></li>
-			<li class="picinfodetail"><span class="picinfosub">Licens:</span> {{ content.license.clean }}</li>
+			<koken:not empty="content.title | content.filename"><li class="picinfodetail"><span class="picinfosub">Namn:</span> {{ content.title | content.filename }}</li></koken:not>
+			<koken:not empty="content.uploaded_on"><li class="picinfodetail"><span class="picinfosub">Publicerad:</span> {{ content.uploaded_on }}</li></koken:not>
+			<koken:not empty="content.captured_on"><li class="picinfodetail"><span class="picinfosub">Tagen:</span> {{ content.captured_on }}</li></koken:not>
+			<koken:albums>
+				<li class="picinfodetail"><span class="picinfosub">Finns i:</span>
+					<koken:loop separator=" ">
+						<koken:link class="picinfosub" title="Se fler bilder från: {{ album.title }}">{{ album.title }}</koken:link>
+					</koken:loop>
+				</li>
+			</koken:albums>
+			<koken:iptc>
+				<koken:not empty="iptc.byline }}">
+					<li class="picinfodetail"><span class="picinfosub">Fotograf:</span> {{ iptc.byline }}</li>
+				</koken:not>
+			</koken:iptc>
+			<koken:not empty="content.license.clean"><li class="picinfodetail"><span class="picinfosub">Licens:</span> {{ content.license.clean }}</li></koken:not>
+			<koken:max_download>
+				<li class="picinfodetail"><span class="picinfosub">Ladda ner:</span> <koken:link class="picinfosub" title="Ladda ner: {{ content.title | content.filename }} i storleken {{ max_download.width }}x{{ max_download.height }}">{{ max_download.title }}</koken:link></li>
+			</koken:max_download>
 		</ul>
 	</div>
 </div>

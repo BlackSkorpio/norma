@@ -70,5 +70,4 @@
     </form>
   </article>
 </div>
-</body>
-</html>
+<koken:include file="inc/components/footer.html" />

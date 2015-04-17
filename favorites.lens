@@ -1,21 +1,21 @@
-<koken:include file="inc/components/header.html" />
+﻿<koken:include file="inc/components/header.html" />
     <koken:load>
       <ol class="grid">
         <koken:loop>
           <li>
-            <koken:link>
-              <koken:img crop="true"/>
+            <koken:link title="Visa mer info för {{ content.title | content.filename }}">
+              <koken:img crop="true" lazy="true"/>
+			  <div><h3>{{ content.title | content.filename }}</h3></div>
             </koken:link>
           </li>
         </koken:loop>
       </ol>
+		<div class="disquis">
+			<koken:discussion>{{ discussion }}</koken:discussion>
+		</div>
     <koken:else>
       <koken:note>
         No images or videos found
       </koken:note>
     </koken:load>
-    <footer>
-      {{ site.copyright }}
-    </footer>
-  </body>
-</html>
+<koken:include file="inc/components/footer.html" />

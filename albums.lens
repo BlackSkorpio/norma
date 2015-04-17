@@ -17,6 +17,7 @@
     <koken:note>
       No public albums found 
     </koken:note>
+  <koken:include file="inc/components/copyright.html" />
   </koken:load>
 </main>
 </body>

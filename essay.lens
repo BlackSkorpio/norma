@@ -19,5 +19,4 @@
 		</koken:note>
 	</koken:load>
 </div>
-</body>
-</html>
+<koken:include file="inc/components/footer.html" />

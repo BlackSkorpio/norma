@@ -14,8 +14,10 @@
 	<koken:content_video>
 	<koken:video />
 	</koken:content_video>
-	<koken:include file="inc/components/picinfo.html" />
 	<koken:include file="inc/components/share.html" />
+		<div class="disquis">
+			<koken:discussion>{{ discussion }}</koken:discussion>
+		</div>
 	<koken:else>
 		<koken:note>
 		No image or video found 
