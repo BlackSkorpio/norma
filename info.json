@@ -7,6 +7,16 @@
 	    "name": "John Elgenstierna",
 		"link": "http://jhne.me/"
 	},
+	"templates": {
+		"contact": {
+			"name": "Contact Info",
+			"description": "A simple contactform with a businesscard with your personal contact information."
+		},
+		"search": {
+			"name": "Search",
+			"description": "Google custom search for your Koken"
+		}
+	},
 
 	"settings": {
 		"Site title": {
