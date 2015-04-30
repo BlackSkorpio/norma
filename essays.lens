@@ -6,6 +6,9 @@
 				<p class="essay-time"><koken:time /></p>
 				<koken:link title="Läs: {{ essay.title }}"><h2>{{ essay.title }}</h2></koken:link>
 			</article>
+			<koken:featured_image>
+				<koken:link title="Läs: {{ essay.title }}"><koken:img size="3:1" lazy="true"/></koken:link>
+			</koken:featured_image>
 		</koken:loop>
 	<koken:else>
 		<koken:note>
