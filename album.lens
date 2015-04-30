@@ -2,31 +2,31 @@
 <koken:load>
 	<article class="top-section">
     <p class="time"><koken:time />
-      <koken:categories>
+      <!--<koken:categories>
       <span class="categories"> /  In
       <koken:loop separator=", ">
         <koken:link>
           {{ category.title }}
         </koken:link>
       </koken:loop>
-      </span>
+      </span>-->
     </koken:categories>
 
     <koken:tags>
-    <span class="tags">Etiketter 
+    <!--<span class="tags">Etiketter 
       <koken:loop separator=", ">
         <koken:link>
           {{ tag.title }}
         </koken:link>
       </koken:loop>
-      </span>
+      </span>-->
     </koken:tags>
     </p>
 	  <p class="album-name">{{ album.title }}</p> 
 	  <p class="album-desc">{{ album.description paragraphs="true" }}</p>
 	 </article>
   <ul class="grid">
-    <koken:loop>
+    <koken:loop limit="18" infinite="true">
       <li>
         <koken:link title="Visa {{ content.title | content.filename }}" lightbox="true">
           <koken:img crop="adaptive" class="preview" lazy="true" alt="{{ content.title | content.filename }}"/>
