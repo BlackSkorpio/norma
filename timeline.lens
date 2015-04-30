@@ -7,7 +7,7 @@
         <koken:event>
           <koken:event_album>           
             <koken:link>
-              <koken:img />
+              <koken:img lazy="true" />
             </koken:link>
             <h2 class="timeline-time">
           <koken:link><koken:time /></koken:link>
@@ -23,7 +23,7 @@
           </koken:event_album>
           <koken:event_album_update>
             <koken:loop>
-              <koken:img />
+              <koken:img lazy="true" />
             </koken:loop>
             <h3>{{ album.title }} ({{ content.length }} new items)</h3> 
             <p>
@@ -33,7 +33,7 @@
           <koken:event_content>
             <koken:content_image>
               <koken:link>
-                <koken:img />
+                <koken:img lazy="true" />
               </koken:link>
             </koken:content_image>
             <koken:content_video>
@@ -51,7 +51,7 @@
           <koken:event_essay>
               <koken:featured_image>
                 <koken:link>
-                  <koken:img />
+                  <koken:img lazy="true" />
                 </koken:link>
               </koken:featured_image>
             <h3>
