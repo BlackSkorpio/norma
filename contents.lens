@@ -1,17 +1,18 @@
 ﻿<koken:include file="inc/components/header.html" />
-    <article class="top-section"><h1 class="album-name">Innehåll</h1></article>
-	<koken:load>
+<img class="img-responsive" alt="Innehåll" src="http://varoystrand.se/storage/originals/ac/f4/banner-content.jpg" width="1920" height="440" />
+  <article class="top-section"><h1 class="album-name">Innehåll</h1></article>
+	<koken:load limit="18" infinite="true">
       <ol class="grid">
         <koken:loop>
           <li>
-            <koken:link title="Visa mer info för {{ content.title | content.filename }}">
+            <koken:link title="Visa {{ content.title | content.filename }} i helskärm" lightbox="true">
               <koken:img crop="true" lazy="true"/>
 			  <div><h3>{{ content.title | content.filename }}</h3></div>
             </koken:link>
           </li>
         </koken:loop>
       </ol>
-    <koken:else>
+	<koken:else>
       <koken:note>
         No images or videos found
       </koken:note>
