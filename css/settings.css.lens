@@ -1,4 +1,10 @@
 @import url("css/picinfo.css");
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+}
 img.k-lazy-loading {
 	background-repeat:no-repeat;
 	background-position:center center;
@@ -120,6 +126,23 @@ h1#sitename{
 	vertical-align: middle;
 /*	opacity: 0.3;*/
 	position: fixed;
+}
+@media screen and (max-width: 600px) {
+	#sitename {
+		background-image: url('inc/logo-30x30.png') !important;
+		height:33px !important;
+		min-width:33px !important;
+		line-height: 33px !important;
+		letter-spacing:2px !important;
+	}
+	h1#sitename {
+		font-family: 'Kalam';
+		font-size: 0.7em !important;
+	}
+	img#logo {
+		max-width: 40px !important;
+		max-height: 40px !important;
+	}
 }
 
 #logo {
@@ -813,7 +836,7 @@ form input, form textarea {
 form input:focus, form textarea:focus {
 	outline:0;
 	background:#000;
-	color:#fff;
+	color:#000;
 }
 
 form label {
