@@ -1,0 +1,36 @@
+﻿<koken:include file="inc/components/header.html" />
+
+    <koken:head>
+		<title>Fritextsökning - {{ site.title }}</title>
+      <meta property="og:site_name" content="Kontakta {{ site.title }}" />
+      <meta property="og:type" content="website" />
+	  <style>
+		.gsc-result-wrapper-overlay, 
+		.gsc-control-cse div, 
+		.gsc-results-wrapper-visible{
+			max-width: 750px !important;
+			top: 22% !important;
+			left: auto !important;
+		}
+	</style>
+    </koken:head>
+<img class="img-responsive" alt="Fritextsökning" src="http://varoystrand.se/storage/originals/a5/9e/banner-search.png" width="1920" height="440" />
+<div class="page-content">
+  <article class="entry" style="max-width: 750px;">
+	<h1 id="page-name">Fritextsökning <!-- - {{ site.title }}&nbsp;--></h1>
+<script>
+  (function() {
+    var cx = '003303270522214330092:_8o3skl6adw';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
+  </article>
+</div>
+<koken:include file="inc/components/footer.html" />
