@@ -5,6 +5,9 @@
 	height: auto;
 	margin: 0;
 }
+#infinite_load_msg {
+	display:none;
+}
 img.k-lazy-loading {
 	background-repeat:no-repeat;
 	background-position:center center;
