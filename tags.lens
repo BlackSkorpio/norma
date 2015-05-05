@@ -2,7 +2,7 @@
 <article class="top-section">
 	<h1 class="page-name">Visar Etiketter...</h1>
 </article>
-<koken:load>
+<koken:load limit="18" infinite="true">
 	<ul class="grid">
     	<koken:loop>
     		<koken:link to="tag" title="Visa allt i  {{ tag.title }}">
@@ -18,3 +18,17 @@
 <koken:else>
 	No tags found.
 </koken:load>
+<div id="infinite_load_msg">
+	<hr></hr>
+		<h4>Loading more...</h4>
+	<hr></hr>
+</div>
+<script>
+	$(window).on('k-infinite-loading', function() {
+		$('#infinite_load_msg').show();
+	});
+	$(window).on('k-infinite-loaded', function() {
+		$('#infinite_load_msg').hide();
+	});
+</script>
+<koken:include file="inc/components/footer.html" />

@@ -1,6 +1,6 @@
 <koken:include file="inc/components/header.html" />
 <div class="page-content">
-<koken:load>
+<koken:load limit="18" infinite="true">
   <ol class="list">
     <koken:loop>
       <li>
@@ -74,6 +74,18 @@
     No timeline data found. 
   </koken:note>
 </koken:load>
+<div id="infinite_load_msg">
+	<hr></hr>
+		<h4>Loading more...</h4>
+	<hr></hr>
 </div>
-</body>
-</html>
+<script>
+	$(window).on('k-infinite-loading', function() {
+		$('#infinite_load_msg').show();
+	});
+	$(window).on('k-infinite-loaded', function() {
+		$('#infinite_load_msg').hide();
+	});
+</script>
+</div>
+<koken:include file="inc/components/footer.html" />

@@ -1,6 +1,6 @@
 <koken:include file="inc/components/header.html" />
 <main role="main">
-  <koken:load>
+  <koken:load limit="18" infinite="true">
     <ul class="grid">
       <koken:loop>
         <li>
@@ -18,6 +18,19 @@
       No public albums found 
     </koken:note>
   </koken:load>
-</main>
+<div id="infinite_load_msg">
+	<hr></hr>
+		<h4>Loading more...</h4>
+	<hr></hr>
+</div>
+<script>
+	$(window).on('k-infinite-loading', function() {
+		$('#infinite_load_msg').show();
+	});
+	$(window).on('k-infinite-loaded', function() {
+		$('#infinite_load_msg').hide();
+	});
+</script>
+ </main>
 </body>
 </html>
