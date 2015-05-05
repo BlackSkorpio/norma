@@ -1,5 +1,5 @@
 ﻿<koken:include file="inc/components/header.html" />
-<img class="img-responsive" alt="Innehåll" src="http://varoystrand.se/storage/originals/ac/f4/banner-content.jpg" width="1920" height="440" />
+<img class="img-responsive" alt="Innehåll" src="//varoystrand.se/storage/originals/ac/f4/banner-content.jpg" width="1920" height="440" />
   <article class="top-section"><h1 class="album-name">Innehåll</h1></article>
 	<koken:load limit="18" infinite="true">
       <ol class="grid">
@@ -17,4 +17,17 @@
         No images or videos found
       </koken:note>
     </koken:load>
+	<div id="infinite_load_msg">
+		<hr></hr>
+		<h4>Loading more...</h4>
+		<hr></hr>
+	</div>
+	<script>
+		$(window).on('k-infinite-loading', function() {
+			$('#infinite_load_msg').show();
+		});
+		$(window).on('k-infinite-loaded', function() {
+			$('#infinite_load_msg').hide();
+		});
+	</script>
 <koken:include file="inc/components/footer.html" />
