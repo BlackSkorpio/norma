@@ -17,10 +17,11 @@
         No images or videos found
       </koken:note>
     </koken:load>
-	<div id="infinite_load_msg">
-		<hr></hr>
-		<h4>Loading more...</h4>
-		<hr></hr>
+	<div class="loading">
+		<div id="infinite_load_msg">
+			<img src="/storage/themes/norma/inc/loader.gif" alt="Loading" width="32" height="32" />
+			<div>Läser in nästa sida...</div>
+		</div>
 	</div>
 	<script>
 		$(window).on('k-infinite-loading', function() {
