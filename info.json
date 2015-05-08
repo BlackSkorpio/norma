@@ -192,6 +192,75 @@
 				}
 			}
 		},
+		"Adress Info": {
+			"icon": "info",
+			"settings": {
+				"Personal info": {
+					"collapse": true,
+					"address_name_prefix": {
+						"label": "Name prefix",
+						"type": "string",
+						"value": "",
+						"note": "Prefix before your name, i.e: Photographer",
+						"note_align": "right"
+					},
+					"address_name": {
+						"label": "Your name",
+						"type": "string",
+						"value": "",
+						"note": "Your full name",
+						"note_align": "right"
+					},
+					"address_avatar_img": {
+						"label": "Image URL",
+						"type": "string",
+						"value": "",
+						"note": "The image to use as avatar (max 400x400px)",
+						"note_align": "right"
+					}
+				},
+				"Address Info": {
+					"collapse": true,
+					"address_street_info": {
+						"label": "Street",
+						"type": "string",
+						"value": "",
+						"note": "Your street adress",
+						"note_align": "right"
+					},
+					"address_postal_code": {
+						"label": "Postal code",
+						"type": "string",
+						"value": "",
+						"note": "Your postal code",
+						"note_align": "right"
+					},
+					"address_city_info": {
+						"label": "City name",
+						"type": "string",
+						"value": "",
+						"note": "City name",
+						"note_align": "right"
+					},
+					"address_country_info": {
+						"label": "Your country",
+						"type": "string",
+						"value": "",
+						"note": "Your country",
+						"note_align": "right"
+					}
+				},
+				"Contact image": {
+					"address_contact_page_id": {
+						"label": "Page id",
+						"type": "string",
+						"value": "",
+						"note": "Page id for your contactform",
+						"note_align": "right"
+					}
+				}
+			}
+		},
 		"Misc": {
 			"icon":"misc",
 			"settings": {
