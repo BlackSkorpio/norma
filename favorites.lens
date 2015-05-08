@@ -1,5 +1,5 @@
 ﻿<koken:include file="inc/components/header.html" />
-    <koken:load limit="18" infinite="true">
+    <koken:load limit="{{ settings.content_index_limit }}" infinite="true">
       <ol class="grid">
         <koken:loop>
           <li>

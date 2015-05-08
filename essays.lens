@@ -1,6 +1,6 @@
 ﻿<koken:include file="inc/components/header.html" />
 <div class="page-content">
-	<koken:load limit="18" infinite="true">
+	<koken:load limit="{{ settings.essays_index_limit }}" infinite="true">
 		<koken:loop>
 			<article class="entry">
 				<p class="essay-time"><koken:time /></p>

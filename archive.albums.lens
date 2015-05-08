@@ -1,5 +1,5 @@
 <koken:include file="inc/components/header.html" />
-<koken:load>
+<koken:load limit="{{ settings.albums_index_limit }}" infinite="true">
     <koken:if data="archive.type" equals="date">
       <article class="top-section">
       <p class="album-name">{{ archive.title }}</p> 

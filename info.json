@@ -41,6 +41,41 @@
 		"Layout": {
 			"icon":"layout",
 			"settings": {
+				"albums_index_limit": {
+					"label": "Items per page",
+					"type": "slider",
+					"min": 6,
+					"max": 48,
+					"step": 6,
+					"value": 12,
+					"scope": [ "albums", "archive.albums", "sets", "set" ]
+				},
+				"albums_detail_limit": {
+					"label": "Items per page",
+					"type": "slider",
+					"min": 12,
+					"max": 100,
+					"step": 6,
+					"value": 24,
+					"scope": [ "album" ]
+				},
+				"content_index_limit": {
+					"label": "Items per page",
+					"type": "slider",
+					"min": 12,
+					"max": 100,
+					"step": 6,
+					"value": 24,
+					"scope": [ "contents", "favorites", "archive.contents" ]
+				},
+				"essays_index_limit": {
+					"label": "Items per page",
+					"type": "slider",
+					"min": 6,
+					"max": 48,
+					"value": 12,
+					"scope": [ "essays" ]
+				},
 				"footer_setting": {
 					"label": "Footer design",
 					"type": "select",

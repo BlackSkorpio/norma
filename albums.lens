@@ -1,6 +1,6 @@
 <koken:include file="inc/components/header.html" />
 <main role="main">
-  <koken:load>
+  <koken:load limit="{{ settings.albums_index_limit }}" infinite="true">
     <ul class="grid">
       <koken:loop>
         <li>
