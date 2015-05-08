@@ -15,8 +15,10 @@
         $('.pulse-album-desc').html(data.summary);
       });
     </script>
+<koken:if true="settings.show_credits">
 	<div id="credit">
 		<a title="Design by www.jhne.me" onclick="return !window.open(this.href);" href="http://www.jhne.me">Design by www.jhne.me</a> || <a title="Powered by: Koken CMS" onclick="return !window.open(this.href);" href="http://koken.me/">Powered by: Koken CMS</a>
 	</div>
+</koken:if>
 	</body>
 </html>
