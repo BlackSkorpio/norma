@@ -12,12 +12,15 @@
 </div>
 <norma-footer>
 	<norma-footer-inside>
-		<koken:link url="/contact/" class="norma-circle norma-left"  title="Kontakta mig för ytterligare information">
-			<img height="32" width="32" src="/contactform/icons/avatar-bjarne-460.jpg" alt="{{ profile.name }}">
+		<koken:link to="page" filter:id="{{ settings.address_contact_page_id }}" class="norma-circle norma-left"  title="Kontakta mig för ytterligare information">
+			<img height="32" width="32" src="{{ settings.address_avatar_img }}" alt="{{ settings.address_name }}">
 		</koken:link>
-		<div class="norma-tagline norma-left"><koken:link url="/contact/" class="norma-tag-copy-link"  title="Kontakta mig för ytterligare information">Fotograf {{ profile.name }}<br />
-			H&ouml;jdv&auml;gen 6<br />
-			45430 Brastad, Sweden</koken:link>
+		<div class="norma-tagline norma-left"><koken:link to="page" filter:id="{{ settings.address_contact_page_id }}" class="norma-tag-copy-link"  title="Kontakta mig för ytterligare information">
+			{{ settings.address_name_prefix }} {{ settings.address_name }}<br />
+			{{ settings.address_street_info }}<br />
+			{{ settings.address_postal_code }} 
+			{{ settings.address_city_info }}, 
+			{{ settings.address_country_info }}</koken:link>
 		</div>
 		<div class="norma-social norma-left">
 			<div class="norma-col-1 norma-left">
