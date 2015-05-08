@@ -19,6 +19,7 @@
 <koken:else>
 	No tags found.
 </koken:load>
+<koken:include file="inc/components/loading_msg.html" />
 </main>
 <koken:if data="settings.footer_setting" equals="tiny_footer">
 	<koken:include file="inc/components/footer_tiny.html" />
