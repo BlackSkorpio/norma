@@ -14,9 +14,11 @@
 		<koken:if data="settings.show_sharing_essay" equals="true">
 			<koken:include file="inc/components/share.html" />
 		</koken:if>
-		<div class="disquis">
-			<koken:discussion>{{ discussion }}</koken:discussion>
-		</div>
+		<koken:if data="settings.show_disc_essay" equals="true">
+			<div class="disquis">
+				<koken:discussion>{{ discussion }}</koken:discussion>
+			</div>
+		</koken:if>
 		<koken:else>
 		<koken:note>
 			No published essay found 

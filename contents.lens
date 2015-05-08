@@ -16,6 +16,11 @@
         No images or videos found
       </koken:note>
     </koken:load>
+	<koken:if data="settings.show_disc_content" equals="true">
+		<div class="disquis">
+			<koken:discussion>{{ discussion }}</koken:discussion>
+		</div>
+	</koken:if>
 	<div class="loading">
 		<div id="infinite_load_msg">
 			<img src="/storage/themes/norma/inc/loader.gif" alt="Loading" width="32" height="32" />

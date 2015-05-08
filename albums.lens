@@ -13,6 +13,11 @@
         </li>
       </koken:loop>
     </ul>
+	<koken:if data="settings.show_disc_image" equals="true">
+		<div class="disquis">
+			<koken:discussion>{{ discussion }}</koken:discussion>
+		</div>
+	</koken:if>
   <koken:else>
     <koken:note>
       No public albums found 
