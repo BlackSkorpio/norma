@@ -7,6 +7,15 @@
 	    "name": "John Elgenstierna",
 		"link": "http://jhne.me/"
 	},
+	
+	"navigation_groups": {
+		"footer": {
+			"label": "Footer",
+			"defaults": [
+				"front", "albums", "contents", "essays", "favorites"
+			]
+		}
+	},
 
 	"settings": {
 		"Site title": {
