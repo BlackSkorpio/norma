@@ -14,6 +14,9 @@
 		</koken:note>
 	</koken:load>
 </div>
+	<koken:if data="settings.show_sharing_page" equals="true">
+		<koken:include file="inc/components/share.html" />
+	</koken:if>
 <koken:if data="settings.footer_setting" equals="tiny_footer">
 	<koken:include file="inc/components/footer_tiny.html" />
 </koken:if>

@@ -35,7 +35,9 @@
       </li>
     </koken:loop>
   </ul>
-  <koken:include file="inc/components/share.html" />
+	<koken:if data="settings.show_sharing_img" equals="true">
+		<koken:include file="inc/components/share.html" />
+	</koken:if>
   <koken:include file="inc/components/copyright.html" />
 <koken:else>
   <koken:note>

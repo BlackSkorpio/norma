@@ -11,7 +11,9 @@
 			<h1 class="page-name">{{ essay.title }}</h1> 
 			{{ essay.content }} 
 		</article>
-		<koken:include file="inc/components/share.html" />
+		<koken:if data="settings.show_sharing_essay" equals="true">
+			<koken:include file="inc/components/share.html" />
+		</koken:if>
 		<div class="disquis">
 			<koken:discussion>{{ discussion }}</koken:discussion>
 		</div>

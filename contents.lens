@@ -1,5 +1,4 @@
 ﻿<koken:include file="inc/components/header.html" />
-<img class="img-responsive" alt="Innehåll" src="//varoystrand.se/storage/originals/ac/f4/banner-content.jpg" width="1920" height="440" />
   <article class="top-section"><h1 class="album-name">Innehåll</h1></article>
 	<koken:load limit="18" infinite="true">
       <ol class="grid">
