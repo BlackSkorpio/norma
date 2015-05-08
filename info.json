@@ -7,16 +7,6 @@
 	    "name": "John Elgenstierna",
 		"link": "http://jhne.me/"
 	},
-	"templates": {
-		"contact": {
-			"name": "Contact Info",
-			"description": "A simple contactform with a businesscard with your personal contact information."
-		},
-		"search": {
-			"name": "Search",
-			"description": "Google custom search for your Koken"
-		}
-	},
 
 	"settings": {
 		"Site title": {
@@ -45,6 +35,128 @@
 	                         }
 	                    ]
 	               }
+				}
+			}
+		},
+		"Layout": {
+			"icon":"layout",
+			"settings": {
+				"footer_setting": {
+					"label": "Footer design",
+					"type": "select",
+					"value": "tiny_footer",
+					"options": [
+					{ "label": "No footer", "value": "no_footer" },
+					{ "label": "Small footer", "value": "tiny_footer" },
+					{ "label": "Big footer", "value": "show_footer" }
+					]
+				},
+				"show_feat_img_pages": {
+					"label": "Show featured image",
+					"type": "boolean",
+					"value": true,
+					"note": "This shows the featured image on the top of the page",
+					"note_align": "left",
+					"scope": [ "pages", "page" ]
+				},
+				"show_feat_img_essay": {
+					"label": "Show featured image",
+					"type": "boolean",
+					"value": true,
+					"note": "This shows the featured image on the top of the page",
+					"note_align": "left",
+					"scope": [ "essay" ]
+				},
+				"show_feat_img_essays": {
+					"label": "Show featured image",
+					"type": "boolean",
+					"value": false,
+					"note": "This shows the featured image below the essay headline",
+					"note_align": "left",
+					"scope": [ "essays" ]
+				}
+			}
+		},
+		"Social": {
+			"icon":"social",
+			"settings": {
+				"show_sharing_essay": {
+					"label": "Show sharing icons",
+					"type": "boolean",
+					"value": true,
+					"note": "This hides the sharing icons",
+					"note_align": "left",
+					"scope": [ "essay", "essays" ]
+				},
+				"show_sharing_img": {
+					"label": "Show sharing icons",
+					"type": "boolean",
+					"value": true,
+					"note": "This hides the sharing icons",
+					"note_align": "left",
+					"scope": [ "album", "albums", "content", "contents" ]
+				},
+				"show_sharing_page": {
+					"label": "Show sharing icons",
+					"type": "boolean",
+					"value": false,
+					"note": "This shows the sharing icons",
+					"note_align": "left",
+					"scope": [ "pages", "page" ]
+				}
+			}
+		},
+		"Discussions": {
+			"icon":"discuss",
+			"settings": {
+				"show_disc_essay": {
+					"label": "Show essay discussions",
+					"note": "Requires the Disqus plugin",
+					"note_align": "left",
+					"type": "boolean",
+					"value": true,
+					"control_first": true,
+					"scope": [ "essay" ]
+				},
+				"show_disc_image": {
+					"label": "Show image discussions",
+					"note": "Requires the Disqus plugin",
+					"note_align": "left",
+					"type": "boolean",
+					"value": true,
+					"control_first": true,
+					"scope": [ "albums", "album" ],
+					"scoped_values": true
+				},
+				"show_disc_content": {
+					"label": "Show content discussions",
+					"note": "Requires the Disqus plugin",
+					"note_align": "left",
+					"type": "boolean",
+					"value": false,
+					"control_first": true,
+					"scope": [ "content", "contents" ]
+				},
+				"show_disc_page": {
+					"label": "Show page discussions",
+					"type": "boolean",
+					"value": false,
+					"control_first": true,
+					"note": "Requires the Disqus plugin",
+					"note_align": "left",
+					"scope": [ "pages", "page" ]
+				}
+			}
+		},
+		"Misc": {
+			"icon":"misc",
+			"settings": {
+				"show_credits": {
+					"label": "Show credits",
+					"type": "boolean",
+					"value": true,
+					"note": "This hides the credit on the index page",
+					"note_align": "left"
 				}
 			}
 		}
