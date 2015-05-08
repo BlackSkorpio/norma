@@ -1,1 +1,38 @@
-<koken:include file="inc/components/header.html" /><main role="main">  <koken:load limit="18" infinite="true">    <ul class="grid">      <koken:loop>        <li>          <koken:link>              <koken:img crop="adaptive" />              <div>                <h3>{{ album.title }} </h3>              </div>          </koken:link>        </li>      </koken:loop>    </ul>  <koken:else>    <koken:note>      No public albums found     </koken:note>  </koken:load>	<div class="loading">		<div id="infinite_load_msg">			<img src="/storage/themes/norma/inc/loader.gif" alt="Loading" width="32" height="32" />			<div>Läser in nästa sida...</div>		</div>	</div>	<script>		$(window).on('k-infinite-loading', function() {			$('#infinite_load_msg').show();		});		$(window).on('k-infinite-loaded', function() {			$('#infinite_load_msg').hide();		});	</script> </main></body></html>
+<koken:include file="inc/components/header.html" />
+<main role="main">
+	<koken:load limit="18" infinite="true">
+		<ul class="grid">
+		<koken:loop>
+			<li>
+				<koken:link><koken:img crop="adaptive" />
+				<div><h3>{{ album.title }}</h3></div>
+				</koken:link>
+			</li>
+		</koken:loop>
+		</ul>
+	<koken:else>
+		<koken:note>No public albums found</koken:note>
+	</koken:load>
+	<div class="loading">
+		<div id="infinite_load_msg">
+			<img src="/storage/themes/norma/inc/loader.gif" alt="Loading" width="32" height="32" />
+			<div>Läser in nästa sida...</div>
+		</div>
+	</div>
+	<script>
+		$(window).on('k-infinite-loading', function() {
+			$('#infinite_load_msg').show();
+		});
+		$(window).on('k-infinite-loaded', function() {
+			$('#infinite_load_msg').hide();
+		});
+	</script>
+</main>
+<koken:if data="settings.footer_setting" equals="tiny_footer">
+	<koken:include file="inc/components/footer_tiny.html" />
+</koken:if>
+<koken:if data="settings.footer_setting" equals="show_footer">
+	<koken:include file="inc/components/footer.html" />
+</koken:if>
+</body>
+</html>

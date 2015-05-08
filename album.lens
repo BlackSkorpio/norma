@@ -42,19 +42,12 @@
     No album data found 
   </koken:note>
 </koken:load>
-	<div class="loading">
-		<div id="infinite_load_msg">
-			<img src="/storage/themes/norma/inc/loader.gif" alt="Loading" width="32" height="32" />
-			<div>Läser in nästa sida...</div>
-		</div>
-	</div>
-	<script>
-		$(window).on('k-infinite-loading', function() {
-			$('#infinite_load_msg').show();
-		});
-		$(window).on('k-infinite-loaded', function() {
-			$('#infinite_load_msg').hide();
-		});
-	</script>
+<koken:include file="inc/components/loading_msg.html" />
+<koken:if data="settings.footer_setting" equals="tiny_footer">
+	<koken:include file="inc/components/footer_tiny.html" />
+</koken:if>
+<koken:if data="settings.footer_setting" equals="show_footer">
+	<koken:include file="inc/components/footer.html" />
+</koken:if>
 </body>
 </html>
