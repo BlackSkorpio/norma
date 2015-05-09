@@ -152,7 +152,7 @@
   transition: all 0.5s ease-out;
 }
 a.button-exif {
-	background-image: url(/storage/themes/norma/inc/components/img/exif/Icon_Camera_Shutter.png);
+	background-image: url(../inc/components/img/exif/Icon_Camera_Shutter.png);
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-left: 32px;

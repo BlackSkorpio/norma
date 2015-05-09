@@ -253,7 +253,7 @@ h1#sitename{
 	float:left;
 	padding:14px;
 	background:#000;/*#000*/
-	background-image: url('inc/apple-touch-icon-57x57.png');
+	background-image: url('../inc/apple-touch-icon-57x57.png');
 	background-position: left center;
 	background-repeat: no-repeat;
 	padding: 0 0.5em 0 3em; /* 40px/16=1.4em*/
@@ -275,7 +275,7 @@ h1#sitename{
 }
 @media screen and (max-width: 600px) {
 	#sitename {
-		background-image: url('inc/logo-30x30.png') !important;
+		background-image: url('../inc/logo-30x30.png') !important;
 		height:33px !important;
 		min-width:33px !important;
 		line-height: 33px !important;

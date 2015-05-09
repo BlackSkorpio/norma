@@ -27,7 +27,7 @@ div.previouslink {
 	float: left;
 }
 #previous_link.previouslink {
-	background-image: url(/storage/themes/norma/inc/components/img/exif/image_previous_result.png);
+	background-image: url(../inc/components/img/exif/image_previous_result.png);
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-left: 30px;
@@ -36,7 +36,7 @@ div.nextlink{
 	float: right;
 }
 #next_link.nextlink {
-	background-image: url(/storage/themes/norma/inc/components/img/exif/image_next_result.png);
+	background-image: url(../inc/components/img/exif/image_next_result.png);
 	background-repeat: no-repeat;
 	background-position: right center;
 	padding-right: 30px;
@@ -128,30 +128,30 @@ li.picinfodetail {
 	height: 19px;
 }
 #exif-model.exifdetail {
-    background-image: url("/storage/themes/norma/inc/components/img/exif/exif_camera_grey.png");
+    background-image: url("../inc/components/img/exif/exif_camera_grey.png");
 }
 #exif-lens.exifdetail {
-    background-image: url("/storage/themes/norma/inc/components/img/exif/exif_lens_grey.png");
+    background-image: url("../inc/components/img/exif/exif_lens_grey.png");
 }
 #exif-aperture.exifdetail {
-    background-image: url("/storage/themes/norma/inc/components/img/exif/exif_aperture_grey.png");
+    background-image: url("../inc/components/img/exif/exif_aperture_grey.png");
 }
 #exif-exposure.exifdetail {
-    background-image: url("/storage/themes/norma/inc/components/img/exif/exif_shutter_speed_grey.png");
+    background-image: url("../inc/components/img/exif/exif_shutter_speed_grey.png");
 }
 #exif-iso.exifdetail {
-    background-image: url("/storage/themes/norma/inc/components/img/exif/exif_iso_grey.png");
+    background-image: url("../inc/components/img/exif/exif_iso_grey.png");
 }
 #exif-focallength.exifdetail {
-    background-image: url("/storage/themes/norma/inc/components/img/exif/exif_focal_length_grey.png");
+    background-image: url("../inc/components/img/exif/exif_focal_length_grey.png");
 }
 #exif-flash.exifdetail {
-    background-image: url("/storage/themes/norma/inc/components/img/exif/exif_flash_grey.png");
+    background-image: url("../inc/components/img/exif/exif_flash_grey.png");
 }
 /* EXIF styling EOF
 */
 #tag.tagdetail {
-	background-image: url("/storage/themes/norma/inc/components/img/exif/tag.png");
+	background-image: url("../inc/components/img/exif/tag.png");
 }
 #tag.tagdetail:hover {
 	color: #000;
