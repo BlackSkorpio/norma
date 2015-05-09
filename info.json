@@ -259,7 +259,7 @@
 						"note": "Page id for your contactform",
 						"note_align": "right"
 					},
-					"address_copyright_page": {
+					"address_copyright_page_id": {
 						"label": "Page id",
 						"type": "string",
 						"value": "",

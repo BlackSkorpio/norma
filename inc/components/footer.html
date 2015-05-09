@@ -5,45 +5,93 @@
 </div>
 <norma-footer>
 	<norma-footer-inside>
-		<koken:link to="page" filter:id="{{ settings.address_contact_page_id }}" class="norma-circle norma-left"  title="Kontakta mig för ytterligare information">
-			<img height="32" width="32" src="{{ settings.address_avatar_img }}" alt="{{ settings.address_name }}">
-		</koken:link>
-		<div class="norma-tagline norma-left"><koken:link to="page" filter:id="{{ settings.address_contact_page_id }}" class="norma-tag-copy-link"  title="Kontakta mig för ytterligare information">
+		<koken:not empty="settings.address_avatar_img">
+			<koken:if data="settings.address_contact_page_id" equals="">
+<!-- We dont have a page id for the contact page -->
+				<a href="#" class="norma-circle norma-left"  title="{{ settings.address_name_prefix }} {{ settings.address_name }}">
+					<img height="32" width="32" src="{{ settings.address_avatar_img }}" alt="{{ settings.address_name }}">
+				</a>
+			<koken:else>
+<!-- We got the page id -->
+				<koken:link to="page" filter:id="{{ settings.address_contact_page_id }}" class="norma-circle norma-left"  title="{{ settings.address_name_prefix }} {{ settings.address_name }}">
+					<img height="32" width="32" src="{{ settings.address_avatar_img }}" alt="{{ settings.address_name }}">
+				</koken:link>
+			</koken:if>
+		</koken:not>
+		<div class="norma-tagline norma-left">
+		<koken:if data="settings.address_contact_page_id" equals="">
+<!-- We dont have a page id for the contact page -->
 			{{ settings.address_name_prefix }} {{ settings.address_name }}<br />
 			{{ settings.address_street_info }}<br />
 			{{ settings.address_postal_code }} 
 			{{ settings.address_city_info }}, 
-			{{ settings.address_country_info }}</koken:link>
+			{{ settings.address_country_info }}
+		<koken:else>
+<!-- We got the page id -->
+		<koken:link to="page" filter:id="{{ settings.address_contact_page_id }}" class="norma-tag-copy-link"  title="{{ settings.address_name_prefix }} {{ settings.address_name }}">
+			{{ settings.address_name_prefix }} {{ settings.address_name }}<br />
+			{{ settings.address_street_info }}<br />
+			{{ settings.address_postal_code }} 
+			{{ settings.address_city_info }}, 
+			{{ settings.address_country_info }}
+			</koken:link>
+		</koken:if>
+
 		</div>
 		<div class="norma-social norma-left">
 			<div class="norma-col-1 norma-left">
 				<a href="{{ profile.facebook }}" title="Följ mig på Facebook">
-					<koken:asset file="inc/components/img/icons/facebook-7-64.png" alt="Facebook" width="32" height="32" align="absmiddle" label="Facebook" /><span class="norma-social-label">Facebook</span>
-				</a><br />
+					<koken:asset file="inc/components/img/icons/facebook-7-64.png" alt="Facebook" width="32" height="32" align="absmiddle" label="Facebook" />
+					<span class="norma-social-label">Facebook</span>
+				</a>
+			<br />
 				<a href="http://instagram.com/bjarnevaryostrand/" title="Följ mig på Instagram">
-					<koken:asset file="inc/components/img/icons/instagram-4-64.png" alt="Instagram" width="32" height="32" align="absmiddle" /><span class="norma-social-label">Instagram</span></a>
+					<koken:asset file="inc/components/img/icons/instagram-4-64.png" alt="Instagram" width="32" height="32" align="absmiddle" />
+					<span class="norma-social-label">Instagram</span>
+				</a>
 			</div>
 			<div class="norma-col-2 norma-left">
 				<a href="{{ profile.google_plus }}" title="Följ mig på Google+">
-					<koken:asset file="inc/components/img/icons/google-plus-4-64.png" alt="gPlus" width="32" height="32" align="absmiddle" /><span class="norma-social-label">google+</span></a><br />
+					<koken:asset file="inc/components/img/icons/google-plus-4-64.png" alt="gPlus" width="32" height="32" align="absmiddle" />
+					<span class="norma-social-label">google+</span>
+				</a>
+			<br />
 				<a href="http://www.500px.com/BaldursPhotography" title="Följ mig på 500px">
-					<koken:asset file="inc/components/img/icons/500px-4-64.png" alt="500px" width="32" height="32" align="absmiddle" /><span class="norma-social-label">500px</span></a>
+					<koken:asset file="inc/components/img/icons/500px-4-64.png" alt="500px" width="32" height="32" align="absmiddle" />
+					<span class="norma-social-label">500px</span>
+				</a>
 			</div>
 			<div class="norma-col-3 norma-left">
 				<a href="https://twitter.com/{{ profile.twitter }}" title="Följ mig på Twitter">
-					<koken:asset file="inc/components/img/icons/twitter-4-64.png" alt="Twitter" width="32" height="32" align="absmiddle" /><span class="norma-social-label">Twitter</span></a><br  />
+					<koken:asset file="inc/components/img/icons/twitter-4-64.png" alt="Twitter" width="32" height="32" align="absmiddle" />
+					<span class="norma-social-label">Twitter</span>
+				</a>
+			<br  />
 				<a href="https://www.pinterest.com/bjarnevarystran/" title="Följ mig på Pinterest">
-					<koken:asset file="inc/components/img/icons/pinterest-4-64.png" alt="Pinterest" width="32" height="32" align="absmiddle" /><span class="norma-social-label">Pinterest</span></a>
+					<koken:asset file="inc/components/img/icons/pinterest-4-64.png" alt="Pinterest" width="32" height="32" align="absmiddle" />
+					<span class="norma-social-label">Pinterest</span>
+				</a>
 			</div>
 			<div class="norma-col-4 norma-left">
-				<a href="/feed/essays/recent.rss" title="Följ mitt artikelflöde">
-					<koken:asset file="inc/components/img/icons/rss-4-64.png" alt="RSS Artiklar" width="32" height="32" align="absmiddle" /><span class="norma-social-label">RSS Artiklar</span></a><br  />
-				<a href="/feed/content/recent.rss" title="Mina senast upplagda bilder">
-					<koken:asset file="inc/components/img/icons/rss-4-64.png" alt="RSS Bilder" width="32" height="32" align="absmiddle" /><span class="norma-social-label">RSS bilder</span></a>
+				<a href="{{ rss.essays }}" title="Följ mitt artikelflöde">
+					<koken:asset file="inc/components/img/icons/rss-4-64.png" alt="RSS Artiklar" width="32" height="32" align="absmiddle" />
+					<span class="norma-social-label">RSS Artiklar</span>
+				</a>
+			<br  />
+				<a href="{{ rss.contents }}" title="Mina senast upplagda bilder">
+					<koken:asset file="inc/components/img/icons/rss-4-64.png" alt="RSS Bilder" width="32" height="32" align="absmiddle" />
+					<span class="norma-social-label">RSS bilder</span>
+				</a>
 			</div>
 		</div>
 		<div class="norma-copyright norma-right">
-			<koken:link to="page" filter:id="{{ settings.address_copyright_page }}" title="Alla rättighter reserverade" class="norma-tag-copy-link">{{ site.copyright }}</koken:link>
+			<koken:if data="settings.address_copyright_page_id" equals="">
+<!-- We dont have a page id for copyright info -->
+				{{ site.copyright }}
+			<koken:else>
+<!-- We got the page id -->
+				<koken:link to="page" filter:id="{{ settings.address_copyright_page_id }}" title="{{ site.copyright }}" class="norma-tag-copy-link">{{ site.copyright }}</koken:link>
+			</koken:if>
 		</div>
 	</norma-footer-inside>
 </norma-footer>

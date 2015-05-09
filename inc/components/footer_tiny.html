@@ -1,14 +1,34 @@
 ﻿<norma-footer class="norma-footer-tiny">
 	<norma-footer-inside>
 		<div class="norma-tagline norma-left">
-		<koken:link to="page" filter:id="{{ settings.address_contact_page_id }}" class="norma-tag-copy-link"  title="Kontakta mig för ytterligare information">
+		<koken:if data="settings.address_contact_page_id" equals="">
+<!-- We dont have a page id for the contact page -->
 			{{ settings.address_name_prefix }} {{ settings.address_name }}<br />
 			{{ settings.address_street_info }}<br />
 			{{ settings.address_postal_code }} 
 			{{ settings.address_city_info }}, 
 			{{ settings.address_country_info }}
-		</koken:link>
+		<koken:else>
+<!-- We got the page id -->
+			<koken:link to="page" filter:id="{{ settings.address_contact_page_id }}" class="norma-tag-copy-link"  title="{{ settings.address_name_prefix }} {{ settings.address_name }}">
+			{{ settings.address_name_prefix }} {{ settings.address_name }}<br />
+			{{ settings.address_street_info }}<br />
+			{{ settings.address_postal_code }} 
+			{{ settings.address_city_info }}, 
+			{{ settings.address_country_info }}
+			</koken:link>
+		</koken:if>
 		</div>
-		<div class="norma-copyright norma-right"><koken:link to="page" filter:id="{{ settings.address_copyright_page }}" title="Alla rättighter reserverade" class="norma-tag-copy-link">{{ site.copyright }}</koken:link></div>
+		<div class="norma-copyright norma-right">
+			<koken:if data="settings.address_copyright_page_id" equals="">
+<!-- We dont have a page id for copyright info -->
+				{{ site.copyright }}
+			<koken:else>
+<!-- We got the page id -->
+				<koken:link to="page" filter:id="{{ settings.address_copyright_page_id }}" title="{{ site.copyright }}" class="norma-tag-copy-link">
+					{{ site.copyright }}
+				</koken:link>
+			</koken:if>
+		</div>
 	</norma-footer-inside>
 </norma-footer>
