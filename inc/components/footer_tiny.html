@@ -1,5 +1,14 @@
-﻿<norma-tiny-footer>
-	<div class="norma-copyright norma-right">
-		Copyright {{ profile.name }}
-	</div>
+﻿<norma-footer class="norma-footer-tiny">
+	<norma-footer-inside>
+		<div class="norma-tagline norma-left">
+		<koken:link to="page" filter:id="{{ settings.address_contact_page_id }}" class="norma-tag-copy-link"  title="Kontakta mig för ytterligare information">
+			{{ settings.address_name_prefix }} {{ settings.address_name }}<br />
+			{{ settings.address_street_info }}<br />
+			{{ settings.address_postal_code }} 
+			{{ settings.address_city_info }}, 
+			{{ settings.address_country_info }}
+		</koken:link>
+		</div>
+		<div class="norma-copyright norma-right"><koken:link to="page" filter:id="{{ settings.address_copyright_page }}" title="Alla rättighter reserverade" class="norma-tag-copy-link">{{ site.copyright }}</koken:link></div>
+	</norma-footer-inside>
 </norma-footer>

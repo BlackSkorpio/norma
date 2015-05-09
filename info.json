@@ -192,7 +192,7 @@
 				}
 			}
 		},
-		"Adress Info": {
+		"Footer Info": {
 			"icon": "info",
 			"settings": {
 				"Personal info": {
@@ -250,12 +250,20 @@
 						"note_align": "right"
 					}
 				},
-				"Contact image": {
+				"Footer links": {
+					"collapse": true,
 					"address_contact_page_id": {
 						"label": "Page id",
 						"type": "string",
 						"value": "",
 						"note": "Page id for your contactform",
+						"note_align": "right"
+					},
+					"address_copyright_page": {
+						"label": "Page id",
+						"type": "string",
+						"value": "",
+						"note": "Page id for your copyright info",
 						"note_align": "right"
 					}
 				}
