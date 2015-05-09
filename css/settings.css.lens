@@ -41,23 +41,19 @@ norma-footer-inside {
 	border-bottom-style: solid;
 	border-bottom-color: #ffffff;
 }
-.k-nav-root {
-    font-size: 1.1em;
+.norma-footer-menu {
+	height: 25px;
+	max-width: 750px;
+}
+.norma-footer-menu li{
     white-space: nowrap;
 	line-height: 2.6em;
-}
-.k-nav-list li {
-    line-height: 1em;
     font-size: 1.1em !important;
 	color: #fff;
 	text-decoration: none;
 	list-style-type: none;
-	display: inline;
 	padding: 0px 12px 0px 0px;
-}
-.norma-footer-menu {
-	height: 25px;
-	max-width: 750px;
+	display: inline;
 }
 .norma-left {
 	float:left;
