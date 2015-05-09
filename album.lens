@@ -2,8 +2,8 @@
 <koken:load limit="{{ settings.albums_detail_limit }}" infinite="true">
 	<article class="top-section">
     <p class="time"><koken:time />
-      <!--<koken:categories>
-      <span class="categories"> /  In
+      <koken:categories>
+     <!-- <span class="categories"> /  In
       <koken:loop separator=", ">
         <koken:link>
           {{ category.title }}
