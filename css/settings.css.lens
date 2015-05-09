@@ -41,22 +41,23 @@ norma-footer-inside {
 	border-bottom-style: solid;
 	border-bottom-color: #ffffff;
 }
-.norma-footer-menu-item {
+.k-nav-root {
     font-size: 1.1em;
-    padding: 0px 12px 0px 0px;
     white-space: nowrap;
-	list-style: outside none none;
 	line-height: 2.6em;
+}
+.k-nav-list li {
+    line-height: 1em;
+    font-size: 1.1em !important;
+	color: #fff;
+	text-decoration: none;
+	list-style-type: none;
+	display: inline;
+	padding: 0px 12px 0px 0px;
 }
 .norma-footer-menu {
 	height: 25px;
 	max-width: 750px;
-}
-.norma-footer-menu-link {
-    line-height: 1em;
-    font-size: 1.1em;
-	color: #fff;
-	text-decoration: none;
 }
 .norma-left {
 	float:left;
