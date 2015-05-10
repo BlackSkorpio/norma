@@ -267,65 +267,65 @@
 						"note_align": "right"
 					}
 				},
-				"Social links": {
+				"Social Footer links": {
 					"collapse": true,
 					"social_facebook_link": {
 						"label": "Facebook",
 						"type": "boolean",
 						"value": true,
-						"note": "Link to the facebook account you have set in Settings/Admininstrator",
+						"note": "Facebook account set in the Settings pane",
 						"note_align": "left"
 					},
 					"social_googleplus_link": {
 						"label": "Google+",
 						"type": "boolean",
 						"value": true,
-						"note": "Link to the google+ account you have set in settingsSettings/Admininstrator",
+						"note": "Google+ account set in the Settings pane",
 						"note_align": "left"
 					},
 					"social_twitter_link": {
 						"label": "Twitter",
 						"type": "boolean",
 						"value": true,
-						"note": "Link to the twitter account you have set in settingsSettings/Admininstrator",
+						"note": "Twitter account set in the Settings pane",
 						"note_align": "left"
 					},
 					"social_instagram_link": {
 						"label": "Instagram",
 						"type": "string",
 						"value": "",
-						"note": "Type in your Instagram handle",
-						"note_align": "left",
+						"note": "Your Instagram handle",
+						"note_align": "right",
 						"reload_preview": true
 					},
 					"social_fivepx_link": {
 						"label": "500px",
 						"type": "string",
 						"value": "",
-						"note": "Type in your 500px handle",
-						"note_align": "left",
+						"note": "Your 500px handle",
+						"note_align": "right",
 						"reload_preview": true
 					},
 					"social_pinterest_link": {
 						"label": "Pinterest",
 						"type": "string",
 						"value": "",
-						"note": "Type in your Pinterest handle",
-						"note_align": "left"
+						"note": "Your Pinterest handle",
+						"note_align": "right",
 						"reload_preview": true
 					},
 					"social_rss_essays_link": {
 						"label": "RSS Essays",
 						"type": "boolean",
 						"value": true,
-						"note": "Shows link to your Essays feed",
+						"note": "Show link to your Essays feed",
 						"note_align": "left"
 					},
 					"social_rss_contents_link": {
 						"label": "RSS Contents",
 						"type": "boolean",
 						"value": true,
-						"note": "Shows link to your contents feed",
+						"note": "Shows link to your Contents feed",
 						"note_align": "left"
 					}
 				}
