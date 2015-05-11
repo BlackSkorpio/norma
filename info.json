@@ -194,6 +194,13 @@
 		},
 		"Footer Info": {
 			"icon": "info",
+			"dependencies": {
+				"evaluate": "any",
+				"conditions": [
+					{ "option": "footer_setting", "equals": "show_footer" },
+					{ "option": "footer_setting", "equals": "tiny_footer" }
+				]
+			},
 			"settings": {
 				"Personal info": {
 					"collapse": true,
