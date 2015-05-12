@@ -7,6 +7,7 @@
 	    "name": "John Elgenstierna",
 		"link": "http://jhne.me/"
 	},
+	"koken_version_required": "0.21.2",
 	
 	"navigation_groups": {
 		"footer": {
@@ -16,7 +17,6 @@
 			]
 		}
 	},
-
 	"settings": {
 		"Site title": {
 			"icon":"type",
@@ -30,7 +30,6 @@
 					],
 					"value": "text"
 				},
-
 				"site_title_img_url": {
 					"label": "Image URL",
 					"type": "string",
@@ -84,16 +83,6 @@
 					"max": 48,
 					"value": 12,
 					"scope": [ "essays" ]
-				},
-				"footer_setting": {
-					"label": "Footer design",
-					"type": "select",
-					"value": "tiny_footer",
-					"options": [
-					{ "label": "No footer", "value": "no_footer" },
-					{ "label": "Small footer", "value": "tiny_footer" },
-					{ "label": "Big footer", "value": "show_footer" }
-					]
 				},
 				"show_feat_img_pages": {
 					"label": "Show featured image",
@@ -192,16 +181,19 @@
 				}
 			}
 		},
-		"Footer Info": {
-			"icon": "info",
-			"dependencies": {
-				"evaluate": "any",
-				"conditions": [
-					{ "option": "footer_setting", "equals": "show_footer" },
-					{ "option": "footer_setting", "equals": "tiny_footer" }
-				]
-			},
+		"Footer": {
+			"icon": "layout",
 			"settings": {
+				"footer_setting": {
+					"label": "Footer design",
+					"type": "select",
+					"value": "tiny_footer",
+					"options": [
+						{ "label": "No footer", "value": "no_footer" },
+						{ "label": "Small footer", "value": "tiny_footer" },
+						{ "label": "Big footer", "value": "show_footer" }
+					]
+				},
 				"Personal info": {
 					"collapse": true,
 					"address_name_prefix": {
@@ -209,21 +201,44 @@
 						"type": "string",
 						"value": "",
 						"note": "Prefix before your name, i.e: Photographer",
-						"note_align": "right"
+						"note_align": "right",
+						"dependencies": {
+							"evaluate": "any",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" },
+								{ "option": "footer_setting", "equals": "tiny_footer" }
+							]
+						}
 					},
 					"address_name": {
 						"label": "Your name",
 						"type": "string",
 						"value": "",
 						"note": "Your full name",
-						"note_align": "right"
+						"note_align": "right",
+						"dependencies": {
+							"evaluate": "any",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" },
+								{ "option": "footer_setting", "equals": "tiny_footer" }
+							]
+						}
 					},
 					"address_avatar_img": {
 						"label": "Image URL",
 						"type": "string",
 						"value": "",
 						"note": "The image to use as avatar (max 400x400px)",
-						"note_align": "right"
+						"note_align": "right",
+						"dependencies": {
+							"evaluate": "all",
+							"conditions": [
+								{
+									"option": "footer_setting",
+									"equals": "show_footer"
+								}
+							]
+						}
 					}
 				},
 				"Address Info": {
@@ -233,28 +248,56 @@
 						"type": "string",
 						"value": "",
 						"note": "Your street adress",
-						"note_align": "right"
+						"note_align": "right",
+						"dependencies": {
+							"evaluate": "any",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" },
+								{ "option": "footer_setting", "equals": "tiny_footer" }
+							]
+						}
 					},
 					"address_postal_code": {
 						"label": "Postal code",
 						"type": "string",
 						"value": "",
 						"note": "Your postal code",
-						"note_align": "right"
+						"note_align": "right",
+						"dependencies": {
+							"evaluate": "any",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" },
+								{ "option": "footer_setting", "equals": "tiny_footer" }
+							]
+						}
 					},
 					"address_city_info": {
 						"label": "City name",
 						"type": "string",
 						"value": "",
 						"note": "City name",
-						"note_align": "right"
+						"note_align": "right",
+						"dependencies": {
+							"evaluate": "any",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" },
+								{ "option": "footer_setting", "equals": "tiny_footer" }
+							]
+						}
 					},
 					"address_country_info": {
 						"label": "Your country",
 						"type": "string",
 						"value": "",
 						"note": "Your country",
-						"note_align": "right"
+						"note_align": "right",
+						"dependencies": {
+							"evaluate": "any",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" },
+								{ "option": "footer_setting", "equals": "tiny_footer" }
+							]
+						}
 					}
 				},
 				"Footer links": {
@@ -264,14 +307,28 @@
 						"type": "string",
 						"value": "",
 						"note": "Page id for your contactform",
-						"note_align": "right"
+						"note_align": "right",
+						"dependencies": {
+							"evaluate": "any",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" },
+								{ "option": "footer_setting", "equals": "tiny_footer" }
+							]
+						}
 					},
 					"address_copyright_page_id": {
 						"label": "Page id",
 						"type": "string",
 						"value": "",
 						"note": "Page id for your copyright info",
-						"note_align": "right"
+						"note_align": "right",
+						"dependencies": {
+							"evaluate": "any",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" },
+								{ "option": "footer_setting", "equals": "tiny_footer" }
+							]
+						}
 					}
 				},
 				"Social Footer links": {
@@ -280,22 +337,37 @@
 						"label": "Facebook",
 						"type": "boolean",
 						"value": true,
-						"note": "Facebook account set in the Settings pane",
-						"note_align": "left"
+						"note": "Edit links in Settings > Admin",
+						"note_align": "left",
+						"dependencies": {
+							"evaluate": "all",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" }							]
+						}
 					},
 					"social_googleplus_link": {
 						"label": "Google+",
 						"type": "boolean",
 						"value": true,
-						"note": "Google+ account set in the Settings pane",
-						"note_align": "left"
+						"note": "Edit links in Settings > Admin",
+						"note_align": "left",
+						"dependencies": {
+							"evaluate": "all",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" }							]
+						}
 					},
 					"social_twitter_link": {
 						"label": "Twitter",
 						"type": "boolean",
 						"value": true,
-						"note": "Twitter account set in the Settings pane",
-						"note_align": "left"
+						"note": "Edit links in Settings > Admin",
+						"note_align": "left",
+						"dependencies": {
+							"evaluate": "all",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" }							]
+						}
 					},
 					"social_instagram_link": {
 						"label": "Instagram",
@@ -303,7 +375,11 @@
 						"value": "",
 						"note": "Your Instagram handle",
 						"note_align": "right",
-						"reload_preview": true
+						"dependencies": {
+							"evaluate": "all",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" }							]
+						}
 					},
 					"social_fivepx_link": {
 						"label": "500px",
@@ -311,7 +387,11 @@
 						"value": "",
 						"note": "Your 500px handle",
 						"note_align": "right",
-						"reload_preview": true
+						"dependencies": {
+							"evaluate": "all",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" }							]
+						}
 					},
 					"social_pinterest_link": {
 						"label": "Pinterest",
@@ -319,21 +399,35 @@
 						"value": "",
 						"note": "Your Pinterest handle",
 						"note_align": "right",
-						"reload_preview": true
+						"dependencies": {
+							"evaluate": "all",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" }							]
+						}
 					},
 					"social_rss_essays_link": {
 						"label": "RSS Essays",
 						"type": "boolean",
 						"value": true,
 						"note": "Show link to your Essays feed",
-						"note_align": "left"
+						"note_align": "left",
+						"dependencies": {
+							"evaluate": "all",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" }							]
+						}
 					},
 					"social_rss_contents_link": {
 						"label": "RSS Contents",
 						"type": "boolean",
 						"value": true,
 						"note": "Shows link to your Contents feed",
-						"note_align": "left"
+						"note_align": "left",
+						"dependencies": {
+							"evaluate": "all",
+							"conditions": [
+								{ "option": "footer_setting", "equals": "show_footer" }							]
+						}
 					}
 				}
 			}
