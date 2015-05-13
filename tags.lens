@@ -1,11 +1,11 @@
 <koken:include file="inc/components/header.html" />
 <article class="top-section">
-	<h1 class="page-name">Visar Etiketter...</h1>
+	<h1 class="page-name">Viewing Tags...</h1>
 </article>
 <koken:load limit="18" infinite="true">
 	<ul class="grid">
     	<koken:loop>
-    		<koken:link to="tag" title="Visa allt i  {{ tag.title }}">
+    		<koken:link to="tag" title="View everyting in  {{ tag.title }}">
 		      	<li class="tag-bg">
 		      		<koken:load source="tag" filter:tags="{{ tag.title }}">
 		   				<koken:img crop="adaptive" lazy="true"/>

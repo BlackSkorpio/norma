@@ -5,8 +5,8 @@
 </article>
 	<koken:content_image>
 		<div class="k-content">
-			<koken:link bind_to_key="f" title="Visa {{ content.title | content.filename }} i helskärm [F]" lightbox="true">
-			<koken:img respond_to="width" lazy="true" title="Visa {{ content.title | content.filename }} i helskärm [F]" /></koken:link>
+			<koken:link bind_to_key="f" title="View {{ content.title | content.filename }} in fullscreen [F]" lightbox="true">
+			<koken:img respond_to="width" lazy="true" alt="{{ content.title | content.filename }}" /></koken:link>
 			<koken:include file="inc/components/next-prev.html" />
 			<div class="entry"><koken:not empty="content.caption">{{ content.caption }}</koken:not></div>
 		</div>

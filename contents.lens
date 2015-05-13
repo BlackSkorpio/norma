@@ -1,10 +1,10 @@
 ﻿<koken:include file="inc/components/header.html" />
-  <article class="top-section"><h1 class="album-name">Innehåll</h1></article>
+  <article class="top-section"><h1 class="album-name">Contents</h1></article>
 	<koken:load limit="{{ settings.content_index_limit }}" infinite="true">
       <ol class="grid">
         <koken:loop>
           <li>
-            <koken:link title="Visa {{ content.title | content.filename }} i helskärm" lightbox="true">
+            <koken:link title="View {{ content.title | content.filename }} in fullscreen" lightbox="true">
               <koken:img crop="true" lazy="true"/>
 			  <div><h3>{{ content.title | content.filename }}</h3></div>
             </koken:link>

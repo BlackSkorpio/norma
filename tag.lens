@@ -1,11 +1,11 @@
 <koken:include file="inc/components/header.html" />
 <koken:head>
-	<title>Visar {{ tag.title }} / {{ site.title }}</title>
+	<title>Shows {{ tag.title }} / {{ site.title }}</title>
 </koken:head>
 <main role="main">
 <koken:load>
   <article class="top-section">
-    <h1 class="page-name">Visar {{ tag.title }}</h1>
+    <h1 class="page-name">Shows {{ tag.title }}</h1>
   </article>
     <ul class="grid">
       <koken:loop>

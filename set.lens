@@ -3,14 +3,14 @@
 		<article class="top-section">
 		<p class="time"><koken:time />
 		<koken:categories>
-			<span class="categories"> /  I      
+			<span class="categories"> /  In      
 			<koken:loop separator=", ">
 				<koken:link>{{ category.title }}</koken:link>
 			</koken:loop>
 			</span>
 		</koken:categories>
 		<koken:tags>
-			<span class="tags"> /  Etiketter
+			<span class="tags"> /  Tags
 				<koken:loop separator=", ">
 					<koken:link>{{ tag.title }}</koken:link>
 				</koken:loop>

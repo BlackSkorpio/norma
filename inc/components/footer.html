@@ -42,7 +42,7 @@
 			<div class="norma-col-1 norma-left">
 				<koken:profile_facebook>
 					<koken:if true="settings.social_facebook_link">
-					<a href="{{ profile.facebook }}" title="Följ mig på Facebook">
+					<a href="{{ profile.facebook }}" title="{{ settings.address_name }} On Facebook">
 						<koken:asset file="inc/components/img/icons/facebook-7-64.png" alt="Facebook" width="32" height="32" align="absmiddle" label="Facebook" />
 						<span class="norma-social-label">Facebook</span>
 					</a>
@@ -50,7 +50,7 @@
 					</koken:if>
 				</koken:profile_facebook>
 				<koken:not empty="settings.social_instagram_link">
-				<a href="https://instagram.com/{{ settings.social_instagram_link }}/" title="Följ mig på Instagram">
+				<a href="https://instagram.com/{{ settings.social_instagram_link }}/" title="{{ settings.address_name }} on Instagram">
 					<koken:asset file="inc/components/img/icons/instagram-4-64.png" alt="Instagram" width="32" height="32" align="absmiddle" />
 					<span class="norma-social-label">Instagram</span>
 				</a>
@@ -59,7 +59,7 @@
 			<div class="norma-col-2 norma-left">
 				<koken:not empty="profile.google_plus">
 					<koken:if true="settings.social_googleplus_link">
-					<a href="{{ profile.google_plus }}" title="Följ mig på Google+">
+					<a href="{{ profile.google_plus }}" title="{{ settings.address_name }} on Google+">
 						<koken:asset file="inc/components/img/icons/google-plus-4-64.png" alt="gPlus" width="32" height="32" align="absmiddle" />
 						<span class="norma-social-label">google+</span>
 					</a>
@@ -67,7 +67,7 @@
 					</koken:if>
 				</koken:not>
 				<koken:not empty="settings.social_fivepx_link">
-				<a href="http://www.500px.com/{{ settings.social_fivepx_link }}" title="Följ mig på 500px">
+				<a href="http://www.500px.com/{{ settings.social_fivepx_link }}" title="{{ settings.address_name }} on 500px">
 					<koken:asset file="inc/components/img/icons/500px-4-64.png" alt="500px" width="32" height="32" align="absmiddle" />
 					<span class="norma-social-label">500px</span>
 				</a>
@@ -76,7 +76,7 @@
 			<div class="norma-col-3 norma-left">
 				<koken:profile_twitter>
 					<koken:if true="settings.social_twitter_link">
-					<a href="https://twitter.com/{{ profile.twitter }}" title="Följ mig på Twitter">
+					<a href="https://twitter.com/{{ profile.twitter }}" title="{{ settings.address_name }} on Twitter">
 						<koken:asset file="inc/components/img/icons/twitter-4-64.png" alt="Twitter" width="32" height="32" align="absmiddle" />
 						<span class="norma-social-label">Twitter</span>
 					</a>
@@ -84,7 +84,7 @@
 					</koken:if>
 				</koken:profile_twitter>
 			<koken:not empty="settings.social_pinterest_link">
-				<a href="https://www.pinterest.com/{{settings.social_pinterest_link }}/" title="Följ mig på Pinterest">
+				<a href="https://www.pinterest.com/{{settings.social_pinterest_link }}/" title="{{ settings.address_name }} on Pinterest">
 					<koken:asset file="inc/components/img/icons/pinterest-4-64.png" alt="Pinterest" width="32" height="32" align="absmiddle" />
 					<span class="norma-social-label">Pinterest</span>
 				</a>
@@ -92,14 +92,14 @@
 			</div>
 			<div class="norma-col-4 norma-left">
 			<koken:if true="settings.social_rss_essays_link">
-				<a href="{{ rss.essays }}" title="Följ mitt artikelflöde">
+				<a href="{{ rss.essays }}" title="{{ settings.address_name }} Essay feed">
 					<koken:asset file="inc/components/img/icons/rss-4-64.png" alt="RSS Artiklar" width="32" height="32" align="absmiddle" />
 					<span class="norma-social-label">RSS Artiklar</span>
 				</a>
 			<br  />
 			</koken:if>
 			<koken:if true="settings.social_rss_contents_link">
-				<a href="{{ rss.contents }}" title="Mina senast upplagda bilder">
+				<a href="{{ rss.contents }}" title="{{ settings.address_name }} image feed">
 					<koken:asset file="inc/components/img/icons/rss-4-64.png" alt="RSS Bilder" width="32" height="32" align="absmiddle" />
 					<span class="norma-social-label">RSS bilder</span>
 				</a>

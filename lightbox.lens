@@ -43,27 +43,27 @@
 	</div>
 </div>
 
-		<a href="#" title="Återgå [ESC]" id="lbox-bttn-close" class="ibutton"><i class="icon-remove-sign"></i></a>
-		<a href="#" title="Visa i helskärm [F]" id="lbox-bttn-fs" class="ibutton"><i class="icon-fullscreen"></i></a>
-		<a href="#" title="Återgå [ESC]" id="lbox-bttn-ns" class="ibutton"><i class="icon-resize-small"></i></a>
+		<a href="#" title="Back [ESC]" id="lbox-bttn-close" class="ibutton"><i class="icon-remove-sign"></i></a>
+		<a href="#" title="View in fullscreen [F]" id="lbox-bttn-fs" class="ibutton"><i class="icon-fullscreen"></i></a>
+		<a href="#" title="Back [ESC]" id="lbox-bttn-ns" class="ibutton"><i class="icon-resize-small"></i></a>
 		<koken:next>
-			<a href="#" id="lbox-bttn-play" class="ibutton" title="Starta bildspel">
+			<a href="#" id="lbox-bttn-play" class="ibutton" title="Start slideshow">
 				<i class="icon-play icon-large"></i>
 			</a>
 		</koken:next>
-		<a href="#" id="lbox-bttn-pause" class="ibutton" title="Pausa bildspel">
+		<a href="#" id="lbox-bttn-pause" class="ibutton" title="Pause">
 			<i class="icon-pause icon-large"></i>
 		</a>
 		<div id="lnav" class="tnav">
 			<koken:previous>
-				<koken:link lightbox="true" bind_to_key="left" title="[<-] Visa föregående">
+				<koken:link lightbox="true" bind_to_key="left" title="[<-] Previous">
 					<span class="ibutton"><i class="icon-angle-left"></i></span>
 				</koken:link>
 			</koken:previous>
 		</div>
 		<div id="lbox_share">
 			<div class="lbox_toggle">
-				<a href="#" id="lbox-bttn-share" class="ibutton" title="Dela {{ content.title | content.filename strip_html="true" }}">
+				<a href="#" id="lbox-bttn-share" class="ibutton" title="Share {{ content.title | content.filename strip_html="true" }}">
 					<i class="icon-export-alt icon-large"></i>
 				</a>
 				<div id="lbox_share_menu">
@@ -74,7 +74,7 @@
 					  <li><koken:link share="tumblr" class="ibutton share-tumblr"><i class="icon-tumblr"></i></koken:link></li>
 					  <li><koken:link share="google-plus" class="ibutton share-google"><i class="icon-gplus"></i></koken:link></li>
 					  <koken:max_download>
-					  <li><koken:link class="ibutton share-dl no-share" title="Ladda ner {{ max_download.width }} x {{ max_download.height }}"><i class="icon-download-alt"></i></koken:link></li></koken:max_download>
+					  <li><koken:link class="ibutton share-dl no-share" title="Download {{ max_download.width }} x {{ max_download.height }}"><i class="icon-download-alt"></i></koken:link></li></koken:max_download>
 					</ul>
 				</div>
 			</div>
@@ -95,7 +95,7 @@
 		</div>
 		<div id="rnav" class="tnav">
 			<koken:next>
-				<koken:link lightbox="true" bind_to_key="right" title="Visa nästa [->]">
+				<koken:link lightbox="true" bind_to_key="right" title="Next [->]">
 					<span class="ibutton"><i class="icon-angle-right"></i></span>
 				</koken:link>
 			</koken:next>

@@ -2,7 +2,7 @@
 <main role="main">
 <koken:load>
   <article class="top-section">
-    <h1 class="page-name">Visar {{ category.title }}</h1>
+    <h1 class="page-name">Showing {{ category.title }}</h1>
   </article>
     <ul class="grid">
       <koken:loop>

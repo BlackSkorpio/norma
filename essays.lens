@@ -4,11 +4,11 @@
 		<koken:loop>
 			<article class="entry">
 				<p class="essay-time"><koken:time /></p>
-				<koken:link title="Läs: {{ essay.title }}"><h2>{{ essay.title }}</h2></koken:link>
+				<koken:link title="View: {{ essay.title }}"><h2>{{ essay.title }}</h2></koken:link>
 			</article>
 			<koken:if data="settings.show_feat_img_essays" equals="true">
 				<koken:featured_image>
-					<koken:link title="Läs: {{ essay.title }}"><koken:img size="3:1" lazy="true"/></koken:link>
+					<koken:link title="View: {{ essay.title }}"><koken:img size="3:1" lazy="true"/></koken:link>
 				</koken:featured_image>
 			</koken:if>
 		</koken:loop>

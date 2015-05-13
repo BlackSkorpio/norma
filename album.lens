@@ -13,7 +13,7 @@
     </koken:categories>
 
     <koken:tags>
-    <!--<span class="tags">Etiketter 
+    <!--<span class="tags">Tags 
       <koken:loop separator=", ">
         <koken:link>
           {{ tag.title }}
@@ -28,7 +28,7 @@
   <ul class="grid">
     <koken:loop>
       <li>
-        <koken:link title="Visa {{ content.title | content.filename }}" lightbox="true">
+        <koken:link title="View {{ content.title | content.filename }}" lightbox="true">
           <koken:img crop="adaptive" class="preview" lazy="true" alt="{{ content.title | content.filename }}"/>
 		  <div><h3>{{ content.title | content.filename }}</h3></div>
         </koken:link>
@@ -43,7 +43,6 @@
 			<koken:discussion>{{ discussion }}</koken:discussion>
 		</div>
 	</koken:if>
-  <koken:include file="inc/components/copyright.html" />
 <koken:else>
   <koken:note>
     No album data found 
