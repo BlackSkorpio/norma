@@ -1,5 +1,5 @@
 ﻿<koken:include file="inc/components/header.html" />
-  <article class="top-section"><h1 class="album-name">Contents</h1></article>
+  <article class="top-section"><h1 class="album-name">{{ labels.content.plural }}</h1></article>
 	<koken:load limit="{{ settings.content_index_limit }}" infinite="true">
       <ol class="grid">
         <koken:loop>

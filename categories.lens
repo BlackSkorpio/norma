@@ -1,7 +1,7 @@
 <koken:include file="inc/components/header.html" />
 <main role="main">
 <article class="top-section">
-	<h1 class="page-name">View by category...</h1>
+	<h1 class="page-name">View by {{ labels.category.plural }}...</h1>
 </article>
 <koken:load>
 	<ul class="grid">
