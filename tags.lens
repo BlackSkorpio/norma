@@ -1,8 +1,8 @@
 <koken:include file="inc/components/header.html" />
 <article class="top-section">
-	<h1 class="page-name">Viewing Tags...</h1>
+	<h1 class="page-name">{{ labels.tag.plural }}</h1>
 </article>
-<koken:load limit="18" infinite="true">
+<koken:load limit="{{ settings.content_index_limit }}" infinite="true">
 	<ul class="grid">
     	<koken:loop>
     		<koken:link to="tag" title="View everyting in  {{ tag.title }}">

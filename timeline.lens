@@ -1,6 +1,6 @@
 <koken:include file="inc/components/header.html" />
 <div class="page-content">
-<koken:load limit="18" infinite="true">
+<koken:load limit="{{ settings.content_index_limit }}" infinite="true">
   <ol class="list">
     <koken:loop>
       <li>
