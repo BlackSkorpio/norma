@@ -342,7 +342,8 @@
 						"dependencies": {
 							"evaluate": "all",
 							"conditions": [
-								{ "option": "footer_setting", "equals": "show_footer" }							]
+								{ "option": "footer_setting", "equals": "show_footer" }
+							]
 						}
 					},
 					"social_googleplus_link": {
@@ -354,7 +355,8 @@
 						"dependencies": {
 							"evaluate": "all",
 							"conditions": [
-								{ "option": "footer_setting", "equals": "show_footer" }							]
+								{ "option": "footer_setting", "equals": "show_footer" }
+							]
 						}
 					},
 					"social_twitter_link": {
@@ -366,7 +368,8 @@
 						"dependencies": {
 							"evaluate": "all",
 							"conditions": [
-								{ "option": "footer_setting", "equals": "show_footer" }							]
+								{ "option": "footer_setting", "equals": "show_footer" }
+							]
 						}
 					},
 					"social_instagram_link": {
@@ -378,7 +381,8 @@
 						"dependencies": {
 							"evaluate": "all",
 							"conditions": [
-								{ "option": "footer_setting", "equals": "show_footer" }							]
+								{ "option": "footer_setting", "equals": "show_footer" }
+							]
 						}
 					},
 					"social_fivepx_link": {
@@ -390,7 +394,8 @@
 						"dependencies": {
 							"evaluate": "all",
 							"conditions": [
-								{ "option": "footer_setting", "equals": "show_footer" }							]
+								{ "option": "footer_setting", "equals": "show_footer" }
+							]
 						}
 					},
 					"social_pinterest_link": {
@@ -402,7 +407,8 @@
 						"dependencies": {
 							"evaluate": "all",
 							"conditions": [
-								{ "option": "footer_setting", "equals": "show_footer" }							]
+								{ "option": "footer_setting", "equals": "show_footer" }
+							]
 						}
 					},
 					"social_rss_essays_link": {
@@ -414,7 +420,8 @@
 						"dependencies": {
 							"evaluate": "all",
 							"conditions": [
-								{ "option": "footer_setting", "equals": "show_footer" }							]
+								{ "option": "footer_setting", "equals": "show_footer" }
+							]
 						}
 					},
 					"social_rss_contents_link": {
@@ -426,7 +433,8 @@
 						"dependencies": {
 							"evaluate": "all",
 							"conditions": [
-								{ "option": "footer_setting", "equals": "show_footer" }							]
+								{ "option": "footer_setting", "equals": "show_footer" }
+							]
 						}
 					}
 				}
