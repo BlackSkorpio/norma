@@ -4,7 +4,7 @@
 		<h1 class="album-name">{{ content.title | content.filename }}</h1>
 	</article>
 	<koken:if true="settings.editorial_img_hide">
-		<koken:has_category title="{{ settings.editorial_img_cats }}">
+		<koken:has_category title="{{ settings.editorial_img_cats }}" && data="settings.editorial_img_hide" equals="true">
 			<!-- Hide any images that has the Category Editorials assigned -->
 			<koken:note>
 				No image or video found 
@@ -35,9 +35,7 @@
 				<koken:discussion>{{ discussion }}</koken:discussion>
 			</div>
 		</koken:if>
-	<koken:if true="settings.editorial_img_hide">
-		</koken:has_category>
-	</koken:if>
+	</koken:has_category>
 <koken:else>
 	<koken:note>
 		No image or video found 
