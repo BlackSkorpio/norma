@@ -3,7 +3,7 @@
 	<koken:load limit="{{ settings.content_index_limit }}" infinite="true">
 		<ol class="grid">
 			<koken:loop>
-				<koken:has_category title="Editorials">
+			<koken:has_category title="{{ settings.editorial_img_cats }}" && data="settings.editorial_img_hide" equals="true">
 					<!-- Hide any images that has the Category Editorials assigned -->
 				<koken:else>
 					<li>

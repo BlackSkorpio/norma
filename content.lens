@@ -3,12 +3,14 @@
 	<article class="top-picinfocontainer">
 		<h1 class="album-name">{{ content.title | content.filename }}</h1>
 	</article>
-	<koken:has_category title="Editorials">
-		<!-- Hide any images that has the Category Editorials assigned -->
-		<koken:note>
-			No image or video found 
-		</koken:note>
-	<koken:else>
+	<koken:if true="settings.editorial_img_hide">
+		<koken:has_category title="{{ settings.editorial_img_cats }}">
+			<!-- Hide any images that has the Category Editorials assigned -->
+			<koken:note>
+				No image or video found 
+			</koken:note>
+		<koken:else>
+	</koken:if>
 		<koken:content_image>
 				<div class="k-content">
 					<koken:link bind_to_key="f" title="View {{ content.title | content.filename }} in fullscreen [F]" lightbox="true">
@@ -33,7 +35,9 @@
 				<koken:discussion>{{ discussion }}</koken:discussion>
 			</div>
 		</koken:if>
-	</koken:has_category>
+	<koken:if true="settings.editorial_img_hide">
+		</koken:has_category>
+	</koken:if>
 <koken:else>
 	<koken:note>
 		No image or video found 

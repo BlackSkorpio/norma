@@ -159,7 +159,7 @@
 					"value": true,
 					"control_first": true,
 					"scope": [ "albums", "album" ],
-					"scoped_values": true
+					"scoped_values": false
 				},
 				"show_disc_content": {
 					"label": "Show content discussions",
@@ -449,6 +449,26 @@
 					"value": true,
 					"note": "This hides the credit on the index page",
 					"note_align": "left"
+				},
+				"editorial_img_hide": {
+					"label": "Hide Editorial images",
+					"type": "boolean",
+					"value": false,
+					"note": "Sort out Editorial images from public listing.",
+					"note_align": "left"
+				},
+				"editorial_img_cats": {
+					"label": "Editorial categories",
+					"type": "string",
+					"value": "",
+					"note": "What image categories should be hidden from the contents listing. If multiple categories separate each with a comma",
+					"note_align": "left",
+					"dependencies": {
+						"evaluate": "all",
+						"conditions": [
+							{ "option": "editorial_img_hide", "equals": true }
+						]
+					}
 				}
 			}
 		}
