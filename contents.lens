@@ -1,32 +1,34 @@
 ﻿<koken:include file="inc/components/header.html" />
   <article class="top-section"><h1 class="album-name">{{ labels.content.plural }}</h1></article>
 	<koken:load limit="{{ settings.content_index_limit }}" infinite="true">
-      <ol class="grid">
-        <koken:loop>
-          <li>
-            <koken:link title="View {{ content.title | content.filename }} in fullscreen" lightbox="true">
-              <koken:img crop="true" lazy="true"/>
-			  <div><h3>{{ content.title | content.filename }}</h3></div>
-            </koken:link>
-          </li>
-        </koken:loop>
-      </ol>
+		<ol class="grid">
+			<koken:loop>
+				<koken:has_category title="Editorials">
+					<!-- Hide any images that has the Category Editorials assigned -->
+				<koken:else>
+					<li>
+						<koken:link title="View {{ content.title | content.filename }} in fullscreen" lightbox="true">
+							<koken:img crop="true" lazy="true"/>
+							<div><h3>{{ content.title | content.filename }}</h3></div>
+						</koken:link>
+					</li>
+				</koken:has_category>
+			</koken:loop>
+		</ol>
 	<koken:else>
-      <koken:note>
-        No images or videos found
-      </koken:note>
-    </koken:load>
+		<koken:note>
+			No images or videos found
+		</koken:note>
+	</koken:load>
 	<koken:if data="settings.show_disc_content" equals="true">
-		<div class="disquis">
-			<koken:discussion>{{ discussion }}</koken:discussion>
-		</div>
+		<div class="disquis"><koken:discussion>{{ discussion }}</koken:discussion></div>
 	</koken:if>
-<koken:include file="inc/components/loading_msg.html" />
-<koken:if data="settings.footer_setting" equals="tiny_footer">
-	<koken:include file="inc/components/footer_tiny.html" />
-</koken:if>
-<koken:if data="settings.footer_setting" equals="show_footer">
-	<koken:include file="inc/components/footer.html" />
-</koken:if>
-</body>
+	<koken:include file="inc/components/loading_msg.html" />
+	<koken:if data="settings.footer_setting" equals="tiny_footer">
+		<koken:include file="inc/components/footer_tiny.html" />
+	</koken:if>
+	<koken:if data="settings.footer_setting" equals="show_footer">
+		<koken:include file="inc/components/footer.html" />
+	</koken:if>
+	</body>
 </html>
